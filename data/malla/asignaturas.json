@@ -1,0 +1,523 @@
+[
+  {
+    "codigo": "1000004",
+    "nombre": "Cálculo Diferencial",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000008",
+    "nombre": "Geometría Analítica y Vectorial",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006825",
+    "nombre": "Química General",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "ciencias-basicas-quimica",
+    "semestre": 1,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000005",
+    "nombre": "Cálculo Integral",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 2,
+    "prerrequisitos": [
+      "1000004"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000019",
+    "nombre": "Física Mecánica",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "ciencias-basicas-fisica",
+    "semestre": 2,
+    "prerrequisitos": [
+      "1000004"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000034",
+    "nombre": "Química Orgánica",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "ciencias-basicas-quimica",
+    "semestre": 2,
+    "prerrequisitos": [
+      "3006825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000007",
+    "nombre": "Ecuaciones Diferenciales",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 3,
+    "prerrequisitos": [
+      "1000005"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000006",
+    "nombre": "Cálculo en Varias Variables",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 3,
+    "prerrequisitos": [
+      "1000005"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007815",
+    "nombre": "Fundamentos de Biotecnología",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 3,
+    "prerrequisitos": [
+      "1000034"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007816",
+    "nombre": "Termodinámica General",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "termodinamica",
+    "semestre": 3,
+    "prerrequisitos": [
+      "1000004"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006914",
+    "nombre": "Estadística 1",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "matematicas-probabilidad-estadistica",
+    "semestre": 4,
+    "prerrequisitos": [
+      "1000005"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007742",
+    "nombre": "Fundamentos de Programación",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "herramientas-informaticas",
+    "semestre": 4,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007844",
+    "nombre": "Seminario de Proyectos I",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "proyectos",
+    "semestre": 4,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007814",
+    "nombre": "Fenómeno de Transporte",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 5,
+    "prerrequisitos": [
+      "1000007"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007811",
+    "nombre": "Balance de Materia y Energía",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "termodinamica",
+    "semestre": 5,
+    "prerrequisitos": [
+      "3007816"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3009352",
+    "nombre": "Introducción al Control de Procesos",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "herramientas-informaticas",
+    "semestre": 5,
+    "prerrequisitos": [
+      "1000007"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007821",
+    "nombre": "Operaciones de Transferencia de Cantidad de Movimiento",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 6,
+    "prerrequisitos": [
+      "3007814"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007820",
+    "nombre": "Operaciones de Transferencia de Calor",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 6,
+    "prerrequisitos": [
+      "3007814"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007825",
+    "nombre": "Termodinámica del Equilibrio de Fases para Sistemas Multicomponentes",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "termodinamica",
+    "semestre": 6,
+    "prerrequisitos": [
+      "3007816"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007845",
+    "nombre": "Seminario de Proyectos II",
+    "creditos": 3,
+    "obligatoria": true,
+    "agrupacion": "proyectos",
+    "semestre": 6,
+    "prerrequisitos": [
+      "3007844"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007822",
+    "nombre": "Operaciones de Transferencia de Masa",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 7,
+    "prerrequisitos": [
+      "3007814"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007813",
+    "nombre": "Equilibrio en Sistemas Reactivos y Fenómenos de Superficie",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "termodinamica",
+    "semestre": 7,
+    "prerrequisitos": [
+      "3007816",
+      "3007825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007817",
+    "nombre": "Ingeniería de Reactores Químicos",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 8,
+    "prerrequisitos": [
+      "3007811",
+      "3007813"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007818",
+    "nombre": "Laboratorio de Operaciones de Transferencia y Control de Procesos",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 8,
+    "prerrequisitos": [
+      "3007821",
+      "3007820",
+      "3009352"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007819",
+    "nombre": "Ingeniería de Procesos",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "operaciones-unitarias-diseno",
+    "semestre": 9,
+    "prerrequisitos": [
+      "3007817"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007846",
+    "nombre": "Seminario de Proyectos III",
+    "creditos": 4,
+    "obligatoria": true,
+    "agrupacion": "proyectos",
+    "semestre": 9,
+    "prerrequisitos": [
+      "3007845"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007740",
+    "nombre": "Trabajo de Grado",
+    "creditos": 6,
+    "obligatoria": true,
+    "agrupacion": "trabajo-grado",
+    "semestre": 10,
+    "prerrequisitos": [
+      "3007846"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000020",
+    "nombre": "Física de Electricidad y Magnetismo",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 2,
+    "prerrequisitos": [
+      "1000019"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "1000021",
+    "nombre": "Física de Oscilaciones, Ondas y Óptica",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 3,
+    "prerrequisitos": [
+      "1000019"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006828",
+    "nombre": "Química Inorgánica",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 2,
+    "prerrequisitos": [
+      "3006825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006826",
+    "nombre": "Química Analítica",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 4,
+    "prerrequisitos": [
+      "3006825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007745",
+    "nombre": "Métodos Numéricos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 4,
+    "prerrequisitos": [
+      "1000007",
+      "3007742"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006830",
+    "nombre": "Fisicoquímica",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 4,
+    "prerrequisitos": [
+      "3007816"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006835",
+    "nombre": "Bioquímica General",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 5,
+    "prerrequisitos": [
+      "1000034"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3006832",
+    "nombre": "Ciencia e Ingeniería de Materiales",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-fundamentacion",
+    "semestre": 5,
+    "prerrequisitos": [
+      "3006825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007831",
+    "nombre": "Simulación y Optimización de Procesos Químicos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 7,
+    "prerrequisitos": [
+      "3007821",
+      "3007820",
+      "3007825"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007832",
+    "nombre": "Catálisis Heterogénea e Ingeniería de Reactores Avanzada",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 8,
+    "prerrequisitos": [
+      "3007817"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007833",
+    "nombre": "Diseño de Equipos y Plantas Químicas",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 8,
+    "prerrequisitos": [
+      "3007822",
+      "3007820"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007834",
+    "nombre": "Biotecnología y Bioprocesos Industriales",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": [
+      "3007815"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007835",
+    "nombre": "Refinación del Petróleo y Petroquímica",
+    "creditos": 4,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": [
+      "3007822",
+      "3007817"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007836",
+    "nombre": "Seguridad de Procesos y Análisis de Riesgo Industrial",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "optativas-disciplinares",
+    "semestre": 9,
+    "prerrequisitos": [
+      "3007811"
+    ],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007837",
+    "nombre": "Procesamiento de Polímeros y Plásticos",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "libre-eleccion",
+    "semestre": 7,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007838",
+    "nombre": "Electroquímica Aplicada y Corrosión",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "libre-eleccion",
+    "semestre": 8,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  },
+  {
+    "codigo": "3007839",
+    "nombre": "Valorización Energética de Residuos y Biomasa",
+    "creditos": 3,
+    "obligatoria": false,
+    "agrupacion": "libre-eleccion",
+    "semestre": 9,
+    "prerrequisitos": [],
+    "whatsapp": ""
+  }
+]

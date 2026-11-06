@@ -1,0 +1,112 @@
+{
+  "componentes": [
+    {
+      "id": "fundamentacion",
+      "nombre": "Fundamentación",
+      "color": "#2F6B4F",
+      "descripcion": "Ciencias básicas, matemáticas, física, química general y orgánica, estadística y herramientas computacionales (40 obligatorios + 20 optativos = 60 créditos)."
+    },
+    {
+      "id": "disciplinar",
+      "nombre": "Formación disciplinar o profesional",
+      "color": "#6B1F3A",
+      "descripcion": "Operaciones unitarias, diseño de procesos, termodinámica y equilibrio, reactores químicos, biotecnología, seminarios de proyectos y trabajo de grado (67 obligatorios + 12 optativos = 79 créditos)."
+    },
+    {
+      "id": "libre-eleccion",
+      "nombre": "Libre elección",
+      "color": "#E8743B",
+      "descripcion": "Espacio de flexibilidad para profundizar en líneas de énfasis (Operaciones Unitarias, Termodinámica, Química Aplicada) u otras disciplinas (36 créditos)."
+    }
+  ],
+  "agrupaciones": [
+    {
+      "id": "matematicas-probabilidad-estadistica",
+      "componente": "fundamentacion",
+      "nombre": "Matemáticas, Probabilidad y Estadística",
+      "exigidos": 24,
+      "obligatorios": 24,
+      "optativos": 0
+    },
+    {
+      "id": "ciencias-basicas-quimica",
+      "componente": "fundamentacion",
+      "nombre": "Química Básica y Orgánica",
+      "exigidos": 6,
+      "obligatorios": 6,
+      "optativos": 0
+    },
+    {
+      "id": "ciencias-basicas-fisica",
+      "componente": "fundamentacion",
+      "nombre": "Física",
+      "exigidos": 4,
+      "obligatorios": 4,
+      "optativos": 0
+    },
+    {
+      "id": "herramientas-informaticas",
+      "componente": "fundamentacion",
+      "nombre": "Herramientas Informáticas y Métodos Numéricos",
+      "exigidos": 6,
+      "obligatorios": 6,
+      "optativos": 0
+    },
+    {
+      "id": "optativas-fundamentacion",
+      "componente": "fundamentacion",
+      "nombre": "Optativas de Fundamentación",
+      "exigidos": 20,
+      "obligatorios": 0,
+      "optativos": 20
+    },
+    {
+      "id": "operaciones-unitarias-diseno",
+      "componente": "disciplinar",
+      "nombre": "Operaciones Unitarias y Diseño",
+      "exigidos": 32,
+      "obligatorios": 32,
+      "optativos": 0
+    },
+    {
+      "id": "termodinamica",
+      "componente": "disciplinar",
+      "nombre": "Termodinámica y Balances",
+      "exigidos": 16,
+      "obligatorios": 16,
+      "optativos": 0
+    },
+    {
+      "id": "proyectos",
+      "componente": "disciplinar",
+      "nombre": "Seminario de Proyectos e Ingeniería",
+      "exigidos": 10,
+      "obligatorios": 10,
+      "optativos": 0
+    },
+    {
+      "id": "optativas-disciplinares",
+      "componente": "disciplinar",
+      "nombre": "Optativas Profesionales de Profundización",
+      "exigidos": 12,
+      "obligatorios": 0,
+      "optativos": 12
+    },
+    {
+      "id": "trabajo-grado",
+      "componente": "disciplinar",
+      "nombre": "Trabajo de Grado",
+      "exigidos": 6,
+      "obligatorios": 6,
+      "optativos": 0
+    },
+    {
+      "id": "libre-eleccion",
+      "componente": "libre-eleccion",
+      "nombre": "Libre Elección",
+      "exigidos": 36,
+      "obligatorios": 0,
+      "optativos": 36
+    }
+  ]
+}

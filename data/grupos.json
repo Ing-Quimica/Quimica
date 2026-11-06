@@ -1,0 +1,13 @@
+[
+  {
+    "id": "aiche",
+    "nombre": "AIChE UNAL Medellín",
+    "logo": "img/logo-aiche.png",
+    "logoCuadrado": "img/logo-aiche.png",
+    "tipo": "Capítulo Estudiantil Internacional",
+    "color": "#007bbd",
+    "enlace": "https://www.instagram.com/aiche.unmed/",
+    "email": "aiche_med@unal.edu.co",
+    "descripcion": "Capítulo oficial del American Institute of Chemical Engineers en la Facultad de Minas. Lidera el congreso anual PROCESA, talleres de simulación de procesos, competencias Chem-E-Car, visitas técnicas y vinculación con la industria química global."
+  }
+]

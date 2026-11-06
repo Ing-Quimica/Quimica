@@ -1,0 +1,1053 @@
+/* =========================================================
+   MÓDULO INICIO — INGENIERÍA QUÍMICA UNAL MEDELLÍN
+   Paleta: "Vino, bosque y naranja"
+   1. Portada Split & Tarjeta de Proceso Químico
+   2. Evento Destacado y Mini-Cards
+   3. Definición del Pregrado, Ficha Técnica y Acreditación
+   4. Rutas y Pilares Curriculares de la Industria Química
+   5. Perfil del Egresado
+   6. Grupos Estudiantiles y Capítulos
+   ========================================================= */
+
+
+/* ---------- 1. Portada Split & Tarjeta de Proceso ---------- */
+
+.portada__landing {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0 76px;
+  position: relative;
+  z-index: 2;
+}
+
+.portada__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.portada__badge-iq {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(74, 20, 40, 0.85);
+  border: 1.5px solid var(--ambar);
+  color: var(--crema);
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.portada__info .portada__titulo {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.portada__info .portada__texto {
+  max-width: 580px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: #F7EAE1;
+}
+
+.portada__info .portada__acciones {
+  justify-content: flex-start;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+.portada__info .portada__cifras {
+  margin: 0;
+  background: rgba(74, 20, 40, 0.88);
+  border: 1.5px solid rgba(242, 166, 90, 0.4);
+}
+
+/* Tarjeta Reactor de Proceso Industrial (Columna Derecha) */
+.portada__visual-iq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reactor-hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(74, 20, 40, 0.84);
+  border: 2px solid rgba(242, 166, 90, 0.45);
+  border-radius: 28px;
+  padding: 26px 24px 22px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 48px -12px rgba(42, 26, 31, 0.8), 0 0 28px rgba(232, 116, 59, 0.22);
+  overflow: hidden;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.reactor-hero-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ambar);
+}
+
+.reactor-hero-card__glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(232, 116, 59, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.reactor-hero-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.reactor-hero-card__tag {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--crema);
+}
+
+.reactor-hero-card__sede {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--ambar);
+}
+
+.reactor-hero-card__nucleo {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactor-hero-card__anillo-giro {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px dashed rgba(242, 166, 90, 0.45);
+  animation: girarAnillo 30s linear infinite;
+}
+
+@keyframes girarAnillo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.reactor-hero-card__camara {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, rgba(107, 31, 58, 0.45) 0%, rgba(20, 5, 12, 0.95) 75%),
+              url(../img/laboratorio-quimica.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 3.5px solid var(--naranja);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 20px rgba(232, 116, 59, 0.35), inset 0 0 15px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.reactor-hero-card:hover .reactor-hero-card__camara {
+  border-color: var(--ambar);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.75), 0 0 28px rgba(242, 166, 90, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Reacción química SVG animada */
+.reaccion-quimica-svg {
+  width: 140px;
+  height: 140px;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
+}
+
+/* Llama térmica inferior */
+.reaccion__llama {
+  animation: llamaFlicker 1.8s ease-in-out infinite;
+  transform-origin: 80px 158px;
+}
+@keyframes llamaFlicker {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 0.9; }
+  50% { transform: scale(1.15, 1.28) translateY(-1px); opacity: 1; filter: drop-shadow(0 0 6px rgba(242, 166, 90, 0.95)); }
+}
+
+/* Ola del fluido reactivo */
+.reaccion__ola {
+  animation: olaFluido 3.2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+@keyframes olaFluido {
+  0% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-2.5px) scaleY(1.08); }
+  100% { transform: translateY(1.5px) scaleY(0.96); }
+}
+
+/* Agitador mecánico continuo (CSTR) */
+.reaccion__aspas {
+  transform-origin: 80px 128px;
+  animation: agitarAspas 2.2s linear infinite;
+}
+@keyframes agitarAspas {
+  0% { transform: scaleX(1); opacity: 0.95; }
+  50% { transform: scaleX(0.2); opacity: 0.65; }
+  100% { transform: scaleX(1); opacity: 0.95; }
+}
+
+/* Molécula reactiva flotante */
+.reaccion__molecula {
+  animation: rotarMolecula 9s linear infinite;
+  transform-origin: 86px 103px;
+}
+@keyframes rotarMolecula {
+  0% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(180deg) translateY(-2px); }
+  100% { transform: rotate(360deg) translateY(0); }
+}
+
+/* Burbujas cinéticas ascendiendo */
+.reaccion__burbuja {
+  animation: ascenderBurbuja 3s infinite ease-in;
+}
+.rb-1 { animation-duration: 2.6s; animation-delay: 0.1s; }
+.rb-2 { animation-duration: 3.4s; animation-delay: 0.9s; }
+.rb-3 { animation-duration: 2.2s; animation-delay: 1.5s; }
+.rb-4 { animation-duration: 2.9s; animation-delay: 0.5s; }
+.rb-5 { animation-duration: 2.4s; animation-delay: 1.8s; }
+
+@keyframes ascenderBurbuja {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  25% { opacity: 0.95; }
+  85% { opacity: 0.8; }
+  100% { transform: translateY(-46px) scale(1.2); opacity: 0; }
+}
+
+/* Vapores de destilación */
+.reaccion__vapor {
+  animation: vaporSubir 2.5s infinite ease-out;
+}
+.rv-1 { animation-delay: 0.2s; }
+.rv-2 { animation-delay: 1.3s; }
+
+@keyframes vaporSubir {
+  0% { transform: translateY(0) scaleY(0.6); opacity: 0; }
+  40% { opacity: 0.8; }
+  100% { transform: translateY(-14px) scaleY(1.2); opacity: 0; }
+}
+
+/* Gota condensada en el refrigerante */
+.reaccion__gota {
+  animation: gotaGoteo 3s infinite ease-in;
+}
+@keyframes gotaGoteo {
+  0%, 55% { opacity: 0; transform: translateY(0) scale(0.4); }
+  70% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(10px) scale(0.8); }
+}
+
+.reactor-hero-card__telemetria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background: rgba(42, 26, 31, 0.65);
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.telemetria-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.telemetria-item__etiqueta {
+  font-family: var(--letra-universidad);
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: #DCEBDF;
+  text-transform: uppercase;
+}
+
+.telemetria-item__valor {
+  font-family: var(--letra-titulo);
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.telemetria-item__valor small {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ambar);
+}
+
+
+/* ---------- 2. Evento Destacado: Día del Ingeniero Químico ---------- */
+
+.iq-evento-banner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 32px;
+  background: linear-gradient(135deg, var(--vino-profundo) 0%, var(--vino) 100%);
+  border-radius: 24px;
+  padding: 32px 36px;
+  color: #fff;
+  border: 2px solid var(--ambar);
+  box-shadow: 0 14px 34px -10px rgba(42, 26, 31, 0.4);
+  margin-top: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.iq-evento-banner::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 116, 59, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.iq-evento-banner__fecha {
+  display: inline-block;
+  font-family: var(--letra-universidad);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--naranja);
+  background: var(--arena);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.iq-evento-banner__titulo {
+  font-family: var(--letra-titulo);
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.iq-evento-banner__texto {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--crema);
+  margin-bottom: 18px;
+  max-width: 540px;
+}
+
+.iq-evento-banner__acciones {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.iq-evento-banner__btn-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--naranja);
+  color: var(--texto);
+  font-family: var(--letra-universidad);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .15s, transform .15s;
+}
+.iq-evento-banner__btn-primario:hover {
+  background: var(--ambar);
+  transform: translateY(-1px);
+}
+
+.iq-evento-banner__btn-secundario {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-decoration: none;
+  transition: background .15s;
+}
+.iq-evento-banner__btn-secundario:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.iq-evento-banner__tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.iq-evento-mini-card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--texto);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform .2s ease;
+}
+
+.iq-evento-mini-card:hover {
+  transform: translateX(4px);
+}
+
+.iq-evento-mini-card__linea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+.iq-evento-mini-card strong {
+  font-family: var(--letra-titulo);
+  font-size: 16px;
+  color: var(--vino);
+}
+.iq-evento-mini-card small {
+  font-size: 12.5px;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
+
+/* ---------- 3. Definición, Ficha Técnica y Acreditación ---------- */
+
+.programa__rejilla {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.programa__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 30px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--linea);
+  box-shadow: 0 14px 30px -20px rgba(42, 26, 31, .3);
+  font-size: 16.5px;
+  color: var(--texto);
+}
+
+.programa__lema {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--vino);
+  border: 1px solid var(--ambar);
+  font-family: var(--letra-universidad);
+  font-size: 11.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--crema);
+  font-weight: 700;
+}
+
+.ficha {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid var(--linea);
+  box-shadow: 0 14px 30px -20px rgba(42, 26, 31, .3);
+  overflow: hidden;
+}
+.ficha li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 22px;
+}
+.ficha li:nth-child(odd) { background: var(--crema); }
+.ficha__etiqueta {
+  font-family: var(--letra-universidad);
+  font-size: 11.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  flex-shrink: 0;
+}
+.ficha__valor {
+  text-align: right;
+  font-weight: 700;
+  color: var(--vino);
+  word-break: break-word;
+}
+
+.programa__parrafos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  line-height: 1.65;
+}
+
+
+/* ---------- 4. Rutas y Pilares Curriculares ---------- */
+
+.rutas-curriculares {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--linea);
+}
+
+.seccion-titulo--rutas {
+  margin-bottom: 28px;
+}
+
+.rutas__titulo {
+  font-family: var(--letra-titulo);
+  font-size: clamp(26px, 3.2vw, 36px);
+  color: var(--vino);
+  letter-spacing: -.02em;
+  margin: 4px 0 10px;
+}
+
+.rutas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.ruta-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 22px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--linea);
+  box-shadow: 0 8px 24px -10px rgba(42, 26, 31, 0.08);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  overflow: hidden;
+}
+
+.ruta-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5px;
+  background: var(--color-ruta, var(--vino));
+}
+
+.ruta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(42, 26, 31, 0.18);
+  border-color: var(--color-ruta, var(--naranja));
+}
+
+.ruta-card__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.ruta-card__numero {
+  font-family: var(--letra-titulo);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: var(--color-ruta, var(--vino));
+  background: var(--arena);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.ruta-card__icono {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--crema);
+  color: var(--color-ruta, var(--vino));
+}
+.ruta-card__icono svg { width: 22px; height: 22px; }
+
+.ruta-card__nombre {
+  font-family: var(--letra-titulo);
+  font-size: 18.5px;
+  font-weight: 700;
+  color: var(--vino-profundo);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.ruta-card__descripcion {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--texto-suave);
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+.ruta-card__pie {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--linea);
+}
+
+.ruta-card__enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--letra-universidad);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--naranja-quemado);
+  text-decoration: none;
+  transition: color .15s, transform .15s;
+}
+.ruta-card__enlace:hover {
+  color: var(--vino);
+  transform: translateX(3px);
+}
+
+/* Acreditación */
+.acreditacion {
+  margin-top: 56px;
+  padding: 34px 36px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid var(--linea);
+  box-shadow: 0 12px 32px -12px rgba(42, 26, 31, 0.1);
+}
+
+.acreditacion__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.acreditacion__sello-icono {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--rosa-vino);
+  color: var(--vino);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.acreditacion__sello-icono svg { width: 28px; height: 28px; }
+
+.acreditacion__antetitulo {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--naranja-quemado);
+  font-weight: 700;
+}
+
+.acreditacion__estado {
+  font-family: var(--letra-titulo);
+  font-size: clamp(20px, 2.5vw, 25px);
+  color: var(--vino);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.acreditacion__rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.acreditacion__tarjeta {
+  background: var(--crema);
+  border-radius: 16px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--verde);
+}
+.acreditacion__tarjeta--renovacion {
+  border-left-color: var(--naranja);
+}
+
+.acreditacion__tarjeta-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.acreditacion__anio-badge {
+  font-family: var(--letra-titulo);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--vino);
+}
+
+.acreditacion__hito-tipo {
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--texto-suave);
+}
+
+.acreditacion__texto {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--texto);
+}
+
+.acreditacion__pie {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--linea);
+}
+
+.acreditacion__info-icono {
+  width: 18px;
+  height: 18px;
+  color: var(--naranja-quemado);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.acreditacion__nota {
+  font-size: 13px;
+  color: var(--texto-suave);
+  line-height: 1.45;
+}
+
+.fuentes {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--texto-suave);
+  text-align: center;
+}
+.fuentes a { color: var(--naranja-quemado); font-weight: 600; }
+
+
+/* ---------- 5. Perfil del Egresado ---------- */
+
+.perfil__tarjetas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.rasgo {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+  border: 1px solid var(--linea);
+  border-top: 5px solid var(--vino);
+  box-shadow: 0 8px 24px -10px rgba(42, 26, 31, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.rasgo:nth-child(2) { border-top-color: var(--verde); }
+.rasgo:nth-child(3) { border-top-color: var(--naranja); }
+.rasgo:nth-child(4) { border-top-color: var(--vino-profundo); }
+
+.rasgo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(42, 26, 31, 0.16);
+}
+
+.rasgo__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--arena);
+  color: var(--vino);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rasgo__icono svg { width: 24px; height: 24px; }
+
+.rasgo h3 {
+  font-family: var(--letra-titulo);
+  font-size: 18.5px;
+  font-weight: 700;
+  color: var(--vino-profundo);
+  line-height: 1.3;
+}
+
+.rasgo p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.perfil__fuente {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+
+
+/* ---------- 6. Grupos Estudiantiles y Capítulos ---------- */
+
+.grupos {
+  padding: 80px 0 96px;
+  background: linear-gradient(180deg, var(--vino-profundo) 0%, #2A101C 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.grupos .seccion-titulo__antetitulo { color: var(--ambar); }
+.grupos .seccion-titulo h2 { color: #ffffff; }
+.grupos .seccion-titulo__intro { color: #E7D5DC; }
+
+.grupos__lista {
+  list-style: none;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.grupo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(242, 166, 90, 0.28);
+  border-radius: 26px;
+  padding: 34px 28px 30px;
+  backdrop-filter: blur(12px);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  position: relative;
+}
+
+.grupo:hover {
+  transform: translateY(-5px);
+  border-color: var(--naranja);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 24px rgba(232, 116, 59, 0.28);
+}
+
+.grupo__enlace {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 14px;
+}
+
+.grupo__logo-wrap {
+  position: relative;
+  width: 124px;
+  height: 124px;
+  border-radius: 22px;
+  background: #ffffff;
+  padding: 10px;
+  border: 3px solid var(--naranja);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.grupo__enlace:hover .grupo__logo-wrap {
+  transform: scale(1.06);
+  border-color: var(--ambar);
+}
+
+.grupo__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+  display: block;
+}
+
+.grupo__badge {
+  position: absolute;
+  bottom: -8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--naranja);
+  color: var(--texto);
+  font-family: var(--letra-universidad);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+.grupo__enlace:hover .grupo__badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grupo__cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.grupo__tipo {
+  font-family: var(--letra-universidad);
+  font-size: 11.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ambar);
+  font-weight: 700;
+}
+
+.grupo__nombre {
+  font-family: var(--letra-titulo);
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 2px 0 4px;
+}
+
+.grupo__descripcion {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5d7dd;
+  max-width: 520px;
+}
+
+.grupo__contactos {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grupo__enlace-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.grupo__enlace-contacto:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .portada__landing {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 0 60px;
+  }
+  .portada__info {
+    align-items: center;
+    text-align: center;
+  }
+  .portada__info .portada__acciones {
+    justify-content: center;
+  }
+  .iq-evento-banner {
+    grid-template-columns: 1fr;
+    padding: 26px 24px;
+  }
+  .programa__rejilla {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .reactor-hero-card {
+    padding: 20px 16px;
+  }
+  .reactor-hero-card__telemetria {
+    grid-template-columns: 1fr;
+  }
+}

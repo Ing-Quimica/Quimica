@@ -1,0 +1,79 @@
+{
+  "nombre": "Ingeniería Química",
+  "universidad": "Universidad Nacional de Colombia",
+  "sede": "Medellín",
+  "facultad": "Facultad de Minas",
+  "lema": "Trabajo y Rectitud",
+  "descripcion": [
+    "El programa de Ingeniería Química de la Universidad Nacional de Colombia – Sede Medellín aplica los conocimientos de las ciencias físicas, químicas, biológicas y matemáticas, junto con las ciencias de la ingeniería, al análisis, diseño, administración, supervisión y control de procesos en los cuales la materia experimenta cambios de estado, energía o composición.",
+    "Forma profesionales integrales con capacidad para concebir, diseñar, construir y operar plantas y equipos industriales eficientes y seguros, optimizando el uso de recursos y energía, con un alto compromiso ético y de sostenibilidad ambiental."
+  ],
+  "rutas": [
+    {
+      "id": "operaciones-unitarias",
+      "nombre": "Operaciones Unitarias y Transporte",
+      "descripcion": "Estudio avanzado de fenómenos de transporte de masa, calor y momento aplicados a columnas, intercambiadores y separación industrial.",
+      "icono": "operaciones",
+      "color": "#6B1F3A"
+    },
+    {
+      "id": "termodinamica-fases",
+      "nombre": "Termodinámica y Equilibrio de Fases",
+      "descripcion": "Modelación termodinámica de sistemas multicomponentes, equilibrio de fases, sistemas reactivos y balances rigurosos de energía.",
+      "icono": "termodinamica",
+      "color": "#B8501E"
+    },
+    {
+      "id": "reactores-cinetica",
+      "nombre": "Reactores y Cinética Química",
+      "descripcion": "Diseño de reactores químicos homogéneos y heterogéneos, catálisis industrial, síntesis química y cinética de reacción.",
+      "icono": "reactor",
+      "color": "#2F6B4F"
+    },
+    {
+      "id": "bioprocesos-energia",
+      "nombre": "Bioprocesos y Transición Energética",
+      "descripcion": "Biotecnología industrial, fermentación, biorefinerías, bioenergía y valorización sostenible de biomasa y materias primas.",
+      "icono": "bioprocesos",
+      "color": "#1E4A36"
+    },
+    {
+      "id": "control-procesos",
+      "nombre": "Control, Simulación e IA en Procesos",
+      "descripcion": "Automatización, simulación rigurosa de plantas químicas, métodos numéricos y optimización computacional para la Industria 4.0.",
+      "icono": "control",
+      "color": "#E8743B"
+    }
+  ],
+  "ficha": [
+    { "etiqueta": "Título que otorga", "valor": "Ingeniero(a) Químico(a)" },
+    { "etiqueta": "Créditos del plan", "valor": "175 créditos" },
+    { "etiqueta": "Duración estimada", "valor": "10 semestres" },
+    { "etiqueta": "Modalidad", "valor": "Presencial" },
+    { "etiqueta": "Jornada", "valor": "Diurna" },
+    { "etiqueta": "Sede y facultad", "valor": "Medellín · Facultad de Minas (Campus Robledo)" },
+    { "etiqueta": "Área Curricular", "valor": "Ingeniería Química e Ingeniería de Petróleos (Dpto. Procesos y Energía)" },
+    { "etiqueta": "Código SNIES", "valor": "123" },
+    { "etiqueta": "Código SIA", "valor": "3525 (Plan Vigente)" },
+    { "etiqueta": "Año de Creación", "valor": "1973 (Más de 50 años de trayectoria)" }
+  ],
+  "cifras": [
+    { "valor": "175", "texto": "créditos" },
+    { "valor": "10", "texto": "semestres" },
+    { "valor": "1973", "texto": "año de creación" },
+    { "valor": "123", "texto": "código SNIES" }
+  ],
+  "acreditacion": {
+    "estado": "Programa Académico Acreditado de Alta Calidad · Facultad de Minas",
+    "hitos": [
+      { "anio": "1973", "texto": "Creación oficial del programa de Ingeniería Química en la Facultad de Minas, Sede Medellín." },
+      { "anio": "Acuerdo 163/18", "texto": "Actualización y modernización curricular del Consejo Académico orientada a las exigencias industriales y tecnológicas contemporáneas." },
+      { "anio": "Res. 9276 MEN", "texto": "Acreditación de Alta Calidad del Ministerio de Educación Nacional que certifica la excelencia docente, investigativa y de laboratorios." }
+    ],
+    "nota": "Para consultas reglamentarias, resoluciones curriculares o trámites académicos, dirígete a la Vicedecanatura Académica o a la Coordinación del Departamento de Procesos y Energía."
+  },
+  "fuentes": [
+    { "titulo": "Página oficial del programa · Facultad de Minas UNAL", "url": "https://old-minas.medellin.unal.edu.co/formacion/pregrado/ingenieriaquimica" },
+    { "titulo": "Departamento de Procesos y Energía · Facultad de Minas", "url": "https://minas.medellin.unal.edu.co/" }
+  ]
+}

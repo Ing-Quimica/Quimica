@@ -1,0 +1,27 @@
+{
+  "titulo": "Perfil del Ingeniero Químico egresado",
+  "intro": "Un profesional formado bajo el lema de la Facultad de Minas, «Trabajo y Rectitud», con sólida fundamentación científica, visión de transformación industrial y liderazgo en el diseño de procesos sostenibles.",
+  "rasgos": [
+    {
+      "icono": "operaciones",
+      "titulo": "Fenómenos de transporte y operaciones unitarias",
+      "texto": "Aplica los principios de transferencia de masa, calor y cantidad de movimiento al diseño, escalamiento y operación técnica y económica de equipos y plantas industriales."
+    },
+    {
+      "icono": "termo",
+      "titulo": "Termodinámica y balances de materia y energía",
+      "texto": "Modela el comportamiento fisicoquímico de mezclas y equilibrios de fases en sistemas multicomponentes y reactivos para optimizar la eficiencia termodinámica de procesos."
+    },
+    {
+      "icono": "reactor",
+      "titulo": "Cinética, reactores y síntesis química",
+      "texto": "Concibe y diseña reactores químicos homogéneos y catalíticos, seleccionando las mejores condiciones de operación para transformar materias primas con mínimo impacto ambiental."
+    },
+    {
+      "icono": "control",
+      "titulo": "Control, simulación y gestión de proyectos",
+      "texto": "Utiliza herramientas numéricas, algoritmos computacionales y sistemas de control para supervisar variables de proceso, garantizando seguridad, calidad y rentabilidad en la industria."
+    }
+  ],
+  "fuente": "Acuerdo 163 de 2018 del Consejo Académico y Proyecto Educativo del Programa (PEP) de Ingeniería Química, Facultad de Minas, Universidad Nacional de Colombia."
+}
