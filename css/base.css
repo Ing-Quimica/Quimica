@@ -891,6 +891,21 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
 .pie__enlace-contacto--ig { color: var(--vino); }
 .pie__enlace-contacto--ig:hover { color: var(--naranja); }
 
+.pie__repre-bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.pie__repre-divisor {
+  width: 80%;
+  height: 1px;
+  background: var(--linea);
+  margin: 4px 0;
+}
+
 
 /* ---------- 7. Mensaje flotante de bienvenida (Modal oficial) ---------- */
 
