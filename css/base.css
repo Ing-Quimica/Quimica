@@ -838,6 +838,7 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
 }
 .pie__tarjeta--desarrollo {
   border-top: 4px solid var(--verde);
+  justify-content: center;
 }
 
 .pie__tarjeta-sub {
@@ -904,6 +905,48 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
   height: 1px;
   background: var(--linea);
   margin: 4px 0;
+}
+
+.pie__tarjeta-enlaces--iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.pie__enlace-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--linea);
+  background: var(--crema);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pie__enlace-icono:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 26, 31, 0.1);
+}
+.pie__enlace-icono--ig {
+  color: var(--vino);
+}
+.pie__enlace-icono--ig:hover {
+  background: var(--rosa-vino);
+  border-color: var(--vino);
+  color: var(--vino-profundo);
+}
+.pie__enlace-icono--correo {
+  color: var(--naranja-quemado);
+}
+.pie__enlace-icono--correo:hover {
+  background: var(--arena);
+  border-color: var(--naranja);
+  color: var(--vino);
 }
 
 
@@ -1028,11 +1071,18 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
   font-weight: 700;
 }
 
+.toast-autor__fila-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
 .toast-autor__pildoras {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
-  margin-top: 2px;
 }
 
 .toast-autor__pildora {
@@ -1047,6 +1097,14 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
   transition: transform .15s, box-shadow .15s;
 }
 .toast-autor__pildora:hover { transform: translateY(-1px); }
+
+.toast-autor__pildora--icono-solo {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
 
 .toast-autor__pildora--wpp {
   background: var(--verde-salvia);
@@ -1077,7 +1135,7 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
   text-transform: uppercase;
   cursor: pointer;
   width: fit-content;
-  margin-top: 4px;
+  margin-top: 0;
   box-shadow: 0 4px 14px rgba(232, 116, 59, 0.35);
   transition: background .15s, transform .1s;
 }
@@ -1205,6 +1263,14 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
   }
   .toast-autor__tarjeta {
     padding: 18px 18px 16px;
+  }
+  .toast-autor__fila-inferior {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .toast-autor__fila-inferior .toast-autor__pildoras {
+    justify-content: center;
   }
   .toast-autor__btn-ok {
     text-align: center;

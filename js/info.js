@@ -784,7 +784,7 @@ function pintarAsesoria() {
         <strong>María José Collazos (Principal)</strong> · <a href="https://wa.me/573024153321" target="_blank" rel="noopener noreferrer">(+57) 302 415 3321</a> · <a href="https://www.instagram.com/majocollazoss/" target="_blank" rel="noopener noreferrer">@majocollazoss</a> · <a href="mailto:macollazosm@unal.edu.co">macollazosm@unal.edu.co</a> | 
         <strong>Joner Figueroa (Suplente)</strong> · <a href="https://wa.me/57322638014" target="_blank" rel="noopener noreferrer">(+57) 322 638 014</a> · 
         <a href="https://chat.whatsapp.com/JjnmD2vnn1h5ISKkKza5S6" target="_blank" rel="noopener noreferrer"><strong>Canal WhatsApp IQ</strong></a></li>
-      <li>Portal web desarrollado por Santiago Escobar Arias · <a href="https://wa.me/573123772091" target="_blank" rel="noopener noreferrer">(+57) 312 377 2091</a></li>
+      <li>Portal web desarrollado por <strong>Santiago Escobar Arias</strong> · Representante de Sistemas (<a href="https://www.instagram.com/s_escobar__/" target="_blank" rel="noopener noreferrer">@s_escobar__</a> · <a href="mailto:saescobara@unal.edu.co">saescobara@unal.edu.co</a>)</li>
       <li>Teléfono Facultad de Minas: ${esc(a.telefono)}</li>
       <li>${esc(a.direccion)}</li>
       <li><a href="${esc(a.solicitudes)}" target="_blank" rel="noopener noreferrer">Solicitudes estudiantiles de la Facultad de Minas</a></li>
