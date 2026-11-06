@@ -4,19 +4,19 @@
       "id": "fundamentacion",
       "nombre": "Fundamentación",
       "color": "#2F6B4F",
-      "descripcion": "Ciencias básicas, matemáticas, física, química general y orgánica, estadística y herramientas computacionales (40 obligatorios + 20 optativos = 60 créditos)."
+      "descripcion": "Ciencias básicas: matemáticas, probabilidad y estadística, física, química, laboratorios de química, informática y optativas de fundamentación (40 obligatorios + 20 optativos = 60 créditos)."
     },
     {
       "id": "disciplinar",
       "nombre": "Formación disciplinar o profesional",
       "color": "#6B1F3A",
-      "descripcion": "Operaciones unitarias, diseño de procesos, termodinámica y equilibrio, reactores químicos, biotecnología, seminarios de proyectos y trabajo de grado (67 obligatorios + 12 optativos = 79 créditos)."
+      "descripcion": "Herramientas básicas de IQ, termodinámica, operaciones unitarias y diseño, proyectos en ingeniería, optativas disciplinares, optativas de administración y trabajo de grado (67 obligatorios + 12 optativos = 79 créditos)."
     },
     {
       "id": "libre-eleccion",
       "nombre": "Libre elección",
       "color": "#E8743B",
-      "descripcion": "Espacio de flexibilidad para profundizar en líneas de énfasis (Operaciones Unitarias, Termodinámica, Química Aplicada) u otras disciplinas (36 créditos)."
+      "descripcion": "Asignaturas de cualquier área o facultad para complementar la formación integral según los intereses del estudiante (36 créditos)."
     }
   ],
   "agrupaciones": [
@@ -24,41 +24,65 @@
       "id": "matematicas-probabilidad-estadistica",
       "componente": "fundamentacion",
       "nombre": "Matemáticas, Probabilidad y Estadística",
-      "exigidos": 24,
-      "obligatorios": 24,
-      "optativos": 0
+      "exigidos": 31,
+      "obligatorios": 27,
+      "optativos": 4
     },
     {
-      "id": "ciencias-basicas-quimica",
-      "componente": "fundamentacion",
-      "nombre": "Química Básica y Orgánica",
-      "exigidos": 6,
-      "obligatorios": 6,
-      "optativos": 0
-    },
-    {
-      "id": "ciencias-basicas-fisica",
+      "id": "fisica",
       "componente": "fundamentacion",
       "nombre": "Física",
-      "exigidos": 4,
+      "exigidos": 12,
       "obligatorios": 4,
-      "optativos": 0
+      "optativos": 8
     },
     {
-      "id": "herramientas-informaticas",
+      "id": "quimica",
       "componente": "fundamentacion",
-      "nombre": "Herramientas Informáticas y Métodos Numéricos",
-      "exigidos": 6,
+      "nombre": "Química",
+      "exigidos": 9,
       "obligatorios": 6,
+      "optativos": 3
+    },
+    {
+      "id": "laboratorio-quimica",
+      "componente": "fundamentacion",
+      "nombre": "Laboratorio de Química",
+      "exigidos": 2,
+      "obligatorios": 0,
+      "optativos": 2
+    },
+    {
+      "id": "herramientas-informatica",
+      "componente": "fundamentacion",
+      "nombre": "Herramientas de Informática",
+      "exigidos": 3,
+      "obligatorios": 3,
       "optativos": 0
     },
     {
       "id": "optativas-fundamentacion",
       "componente": "fundamentacion",
       "nombre": "Optativas de Fundamentación",
-      "exigidos": 20,
+      "exigidos": 3,
       "obligatorios": 0,
-      "optativos": 20
+      "optativos": 3
+    },
+    {
+      "id": "herramientas-basicas-iq",
+      "componente": "disciplinar",
+      "nombre": "Herramientas Básicas para Ingeniería Química",
+      "exigidos": 8,
+      "obligatorios": 8,
+      "optativos": 0
+    },
+    {
+      "id": "termodinamica",
+      "componente": "disciplinar",
+      "nombre": "Termodinámica",
+      "exigidos": 11,
+      "obligatorios": 11,
+      "optativos": 0
     },
     {
       "id": "operaciones-unitarias-diseno",
@@ -69,17 +93,9 @@
       "optativos": 0
     },
     {
-      "id": "termodinamica",
+      "id": "proyectos-ingenieria",
       "componente": "disciplinar",
-      "nombre": "Termodinámica y Balances",
-      "exigidos": 16,
-      "obligatorios": 16,
-      "optativos": 0
-    },
-    {
-      "id": "proyectos",
-      "componente": "disciplinar",
-      "nombre": "Seminario de Proyectos e Ingeniería",
+      "nombre": "Proyectos en Ingeniería",
       "exigidos": 10,
       "obligatorios": 10,
       "optativos": 0
@@ -87,10 +103,18 @@
     {
       "id": "optativas-disciplinares",
       "componente": "disciplinar",
-      "nombre": "Optativas Profesionales de Profundización",
-      "exigidos": 12,
+      "nombre": "Optativas Formación Disciplinar o Profesional",
+      "exigidos": 9,
       "obligatorios": 0,
-      "optativos": 12
+      "optativos": 9
+    },
+    {
+      "id": "optativas-administracion",
+      "componente": "disciplinar",
+      "nombre": "Optativas Administración",
+      "exigidos": 3,
+      "obligatorios": 0,
+      "optativos": 3
     },
     {
       "id": "trabajo-grado",
