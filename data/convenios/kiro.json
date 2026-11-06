@@ -1,0 +1,78 @@
+{
+ "id": "kiro",
+ "queEs": "«Plan Estudiantil de Kiro» es el nuevo convenio oficial de la Universidad Nacional de Colombia (UNAL) con Amazon Web Services (AWS), anunciado a través de la Dirección Nacional de Estrategia Digital (DNED). Kiro es el entorno de desarrollo y programación agéntica con Inteligencia Artificial que convierte tus ideas e instrucciones en especificaciones estructuradas, arquitecturas técnicas y código funcional listo para proyectos de clase, semilleros, hackatones o el MVP de tu emprendimiento.",
+ "quienes": [
+  "Estudiantes activos de pregrado y posgrado de la Universidad Nacional de Colombia (todas las sedes)",
+  "Comunidad académica de la UNAL vinculada a través de la Dirección Nacional de Estrategia Digital (DNED)"
+ ],
+ "incluye": [
+  "1 año (12 meses) de acceso 100% GRATIS al Plan Estudiantil de Kiro",
+  "1.000 créditos mensuales de Inteligencia Artificial de AWS para generación de código, refactorización y pruebas",
+  "Generación de especificaciones estructuradas, diseño de arquitectura y prototipado rápido (MVP)",
+  "Entorno de programación con soporte para múltiples lenguajes, frameworks y modelos avanzados de IA",
+  "Activación directa con correo universitario sin requerir tarjeta de crédito ni cobros posteriores"
+ ],
+ "requisitos": [
+  "Correo electrónico institucional activo con dominio @unal.edu.co",
+  "Ser estudiante activo de la Universidad Nacional de Colombia",
+  "Completar la verificación académica estudiantil en la plataforma oficial"
+ ],
+ "video": "https://www.youtube-nocookie.com/embed/_CjEy_mtIjM",
+ "pasos": [
+  {
+   "titulo": "Mira el videotutorial oficial de activación",
+   "texto": "Consulta el tutorial paso a paso preparado para la comunidad UNAL en YouTube (enlace abajo o reproductor integrado), donde se explica con detalle el proceso de registro, validación y activación de créditos."
+  },
+  {
+   "titulo": "Consulta las directrices en el portal de la DNED UNAL",
+   "texto": "Ingresa a dned.unal.edu.co para conocer los anuncios oficiales y el marco institucional del convenio de la Universidad Nacional de Colombia con AWS."
+  },
+  {
+   "titulo": "Accede a Kiro y selecciona el Plan Estudiantil",
+   "texto": "Entra a la plataforma oficial de Kiro y elige la opción de registro para estudiantes universitarios (Kiro Student Plan)."
+  },
+  {
+   "titulo": "Regístrate con tu correo institucional @unal.edu.co",
+   "texto": "Ingresa obligatoriamente tu correo universitario @unal.edu.co para que el sistema valide tu pertenencia a la red de universidades aliadas de la UNAL."
+  },
+  {
+   "titulo": "Verifica tu condición académica y comienza a programar",
+   "texto": "Finaliza la validación estudiantil sin ingresar tarjeta de crédito. Al instante contarás con tus primeros 1.000 créditos mensuales para construir aplicaciones y potenciar tus proyectos."
+  }
+ ],
+ "enlaces": [
+  {
+   "texto": "Ver Videotutorial en YouTube",
+   "url": "https://youtu.be/_CjEy_mtIjM?si=W2qTw-v7UpkoP_tz",
+   "principal": true
+  },
+  {
+   "texto": "Portal Oficial DNED (dned.unal.edu.co)",
+   "url": "https://dned.unal.edu.co"
+  },
+  {
+   "texto": "Plataforma Oficial de Kiro (AWS)",
+   "url": "https://kiro.dev"
+  }
+ ],
+ "soporte": {
+  "texto": "Para consultas o novedades técnicas con servicios digitales institucionales, acude al portal de la DNED o escribe a",
+  "correo": "dned@unal.edu.co"
+ },
+ "consejos": [
+  "Regístrate siempre con tu correo institucional @unal.edu.co; de lo contrario, la plataforma no aplicará el beneficio del convenio.",
+  "Los 1.000 créditos se recargan mes a mes de manera automática durante 12 meses continuos.",
+  "Para Ingeniería Química, puedes emplear Kiro para programar scripts de balance de materia y energía en Python, automatizar simulaciones, diseñar interfaces interactivas y acelerar proyectos de investigación y semilleros.",
+  "Guarda el enlace del videotutorial para repasar cómo formular instrucciones y prompts para que Kiro estructure tu código correctamente."
+ ],
+ "fuentes": [
+  {
+   "titulo": "Dirección Nacional de Estrategia Digital (DNED) · Universidad Nacional de Colombia",
+   "url": "https://dned.unal.edu.co"
+  },
+  {
+   "titulo": "Tutorial oficial de activación Kiro UNAL (YouTube)",
+   "url": "https://youtu.be/_CjEy_mtIjM?si=W2qTw-v7UpkoP_tz"
+  }
+ ]
+}

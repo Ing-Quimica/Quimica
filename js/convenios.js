@@ -16,6 +16,7 @@ const ICONOS = {
   codigo: '<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
   terminal: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/>',
   nota: '<path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
+  fantasma: '<path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/>',
 };
 const icono = (nombre) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONOS[nombre] || ''}</svg>`;
 const FLECHA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
@@ -67,7 +68,7 @@ function pintarLista() {
             <span class="item__icono">${icono(c.icono)}</span>
             <span class="item__texto">
               <span class="item__etiquetas">
-                <span class="etiqueta etiqueta--${esc(c.tipo)}">${esc(tipoDe(c.tipo).nombre)}</span>
+                <span class="etiqueta etiqueta--${esc(c.tipo)}">${esc(tipoDe(c.tipo).nombre)}</span>${c.nuevo ? ' <span class="etiqueta etiqueta--nuevo">¡Nuevo!</span>' : ''}
                 <span class="item__categoria">${esc(c.categoria)}</span>
               </span>
               <span class="item__nombre">${esc(c.nombre)}</span>
@@ -141,6 +142,14 @@ function pintarDetalle(id) {
               </li>`).join('')}
           </ol>
         </section>
+
+        ${d.video ? `
+          <div class="detalle__video-bloque">
+            <h4>Tutorial de activación en video</h4>
+            <div class="convenio-video-wrap">
+              <iframe src="${esc(urlSegura(d.video))}" title="Tutorial de activación en video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>` : ''}
 
         <div class="enlaces">
           ${d.enlaces.map((e) => `

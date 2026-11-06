@@ -10,7 +10,7 @@ Sitio web oficial del programa de Ingeniería Química de la Facultad de Minas, 
 | `malla.html` | Malla curricular interactiva del Plan 3525 (175 créditos distribuidos en 10 semestres): prerrequisitos y dependencias coloreadas, banco de recursos drive y catálogo filtrado por componentes y agrupaciones |
 | `intercampus.html` | Rutas intercampus (Robledo ➔ El Volador, El Volador ➔ Robledo, Río ➔ El Volador), cálculo de próxima salida en tiempo real, guía explicativa y láminas oficiales |
 | `info.html` | Información general y guía estudiantil (P.A.P.A., bolsa de 175 créditos SIA, horas de corresponsabilidad, citas SIA, simulador interactivo y preguntas frecuentes) |
-| `convenios.html` | Convenios de la UNAL (Coursera, MATLAB, Microsoft 365) y beneficios para estudiantes (Autodesk, GitHub, JetBrains, Spotify): lista interactiva con pasos de activación |
+| `convenios.html` | Convenios de la UNAL (Kiro AWS, Coursera, MATLAB, Microsoft 365) y beneficios para estudiantes (Autodesk, GitHub, JetBrains, Spotify): lista interactiva con pasos de activación |
 
 ## Arquitectura de datos (`data/`)
 
