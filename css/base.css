@@ -1292,3 +1292,51 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
     font-size: 11px;
   }
 }
+
+
+/* ---------- Aviso Legal y Propiedad Intelectual ---------- */
+.pie__legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 860px;
+  margin: 14px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--linea, rgba(0, 0, 0, 0.12));
+  text-align: center;
+}
+
+.pie__legal-texto {
+  font-family: var(--letra-texto, sans-serif);
+  font-size: 12px;
+  color: var(--tinta-suave, #555555);
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.92;
+}
+
+.pie__legal-aviso {
+  font-family: var(--letra-texto, sans-serif);
+  font-size: 11px;
+  color: var(--tinta-suave, #666666);
+  line-height: 1.55;
+  margin: 0;
+  opacity: 0.8;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.pie__legal-aviso strong {
+  color: var(--tinta, #222222);
+}
+
+.pie__copyright {
+  font-family: var(--letra-texto, sans-serif);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--tinta-suave, #555555);
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.85;
+}

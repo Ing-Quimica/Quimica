@@ -12,6 +12,12 @@ const $$ = (selector, raiz = document) => [...raiz.querySelectorAll(selector)];
 const esc = (texto) => String(texto ?? '').replace(/[&<>"']/g, (c) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
+if (typeof window !== 'undefined') {
+  window.$ = $;
+  window.$ = $;
+  window.esc = esc;
+}
+
 
 /* ---------- Carga de datos ---------- */
 
@@ -56,6 +62,12 @@ const PAGINAS = [
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="7" y1="16" x2="17" y2="16"/></svg>`
   },
   {
+    id: 'avance',
+    texto: 'Mi avance',
+    url: 'avance.html',
+    icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
+  },
+  {
     id: 'malla',
     texto: 'Malla curricular',
     url: 'malla.html',
@@ -82,8 +94,10 @@ const PAGINAS = [
 ];
 
 function pintarBarra() {
+  const contenedorBarra = $('#barra');
+  if (!contenedorBarra) return;
   const actual = document.body.dataset.pagina;
-  $('#barra').outerHTML = `
+  contenedorBarra.outerHTML = `
     <header class="barra" id="encabezado-barra">
       <div class="barra__progreso" id="barra-progreso" aria-hidden="true"></div>
       <div class="contenedor barra__contenido">
@@ -271,7 +285,9 @@ function configurarMenuMovil() {
 }
 
 function pintarPie() {
-  $('#pie').outerHTML = `
+  const contenedorPie = $('#pie');
+  if (!contenedorPie) return;
+  contenedorPie.outerHTML = `
     <footer class="pie">
       <div class="pie__marca-central">
         <div class="pie__escudo">
@@ -343,6 +359,11 @@ function pintarPie() {
             </a>
           </div>
         </div>
+      </div>
+      <div class="pie__legal">
+        <p class="pie__legal-texto">Proyecto estudiantil sin ánimo de lucro · Iniciativa académica e informativa para la comunidad universitaria de la Universidad Nacional de Colombia — Sede Medellín.</p>
+        <p class="pie__legal-aviso"><strong>Aviso de Propiedad Intelectual y Seguridad:</strong> El diseño, arquitectura de software, código fuente, experiencia de usuario (UX/UI), herramientas interactivas e imágenes de vista previa están protegidos por la Ley 23 de 1982, Decisión Andina 351 y Arts. 270 y 271 del Código Penal Colombiano. Queda prohibida la reproducción parcial o total, plagio, copia de funcionalidades o ingeniería inversa sin autorización previa y por escrito del autor. Los logotipos e identidad visual son obra de la representación estudiantil y su uso requiere autorización expresa de la misma. Cualquier intento de vulneración o alteración informática será sancionado conforme a la Ley 1273 de 2009 (Delitos Informáticos).</p>
+        <p class="pie__copyright">© 2026 · Todos los derechos reservados.</p>
       </div>
     </footer>`;
 }
