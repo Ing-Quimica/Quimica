@@ -11,132 +11,6 @@ const POR_PAGINA = 12;
 const ROMANOS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 const ICONO_WHATSAPP = `<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.07 7.71C8.89 7.71 8.6 7.78 8.36 8.04C8.11 8.3 7.41 8.96 7.41 10.3C7.41 11.63 8.38 12.92 8.52 13.1C8.66 13.29 10.42 16 13.12 17.17C15.36 18.14 15.82 17.95 16.31 17.9C16.8 17.86 17.88 17.26 18.11 16.63C18.33 16 18.33 15.46 18.26 15.35C18.2 15.24 18.01 15.18 17.73 15.04C17.45 14.9 16.08 14.23 15.83 14.13C15.57 14.04 15.39 13.99 15.2 14.27C15.02 14.55 14.49 15.18 14.33 15.36C14.17 15.55 14.01 15.57 13.73 15.43C13.45 15.29 12.27 14.9 10.87 13.65C9.78 12.68 9.05 11.48 8.84 11.12C8.63 10.76 8.82 10.56 8.96 10.42C9.09 10.29 9.25 10.08 9.39 9.92C9.53 9.76 9.58 9.64 9.67 9.46C9.76 9.27 9.72 9.11 9.65 8.97C9.58 8.83 9.07 7.58 8.86 7.07C8.66 6.58 8.45 6.64 8.3 6.63C8.15 6.63 7.97 6.63 7.78 6.63"/></svg>`;
 
-/* Fresita Pixel Art (16x16) para Química Orgánica */
-const FRESITA_PIXEL_SVG = `<svg class="fresita-pixel-svg" viewBox="0 0 16 16" width="17" height="17" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">` +
-  `<rect x="7" y="0" width="1" height="1" fill="#1b4332"/><rect x="8" y="0" width="1" height="1" fill="#1b4332"/>` +
-  `<rect x="7" y="1" width="1" height="1" fill="#1b4332"/><rect x="8" y="1" width="1" height="1" fill="#1b4332"/>` +
-  `<rect x="4" y="2" width="1" height="1" fill="#22543d"/><rect x="5" y="2" width="1" height="1" fill="#22543d"/><rect x="6" y="2" width="1" height="1" fill="#22543d"/><rect x="7" y="2" width="1" height="1" fill="#1b4332"/><rect x="8" y="2" width="1" height="1" fill="#1b4332"/><rect x="9" y="2" width="1" height="1" fill="#22543d"/><rect x="10" y="2" width="1" height="1" fill="#22543d"/><rect x="11" y="2" width="1" height="1" fill="#22543d"/>` +
-  `<rect x="3" y="3" width="1" height="1" fill="#22543d"/><rect x="4" y="3" width="1" height="1" fill="#68d391"/><rect x="5" y="3" width="1" height="1" fill="#68d391"/><rect x="6" y="3" width="1" height="1" fill="#22543d"/><rect x="7" y="3" width="1" height="1" fill="#22543d"/><rect x="8" y="3" width="1" height="1" fill="#22543d"/><rect x="9" y="3" width="1" height="1" fill="#22543d"/><rect x="10" y="3" width="1" height="1" fill="#68d391"/><rect x="11" y="3" width="1" height="1" fill="#68d391"/><rect x="12" y="3" width="1" height="1" fill="#22543d"/>` +
-  `<rect x="2" y="4" width="1" height="1" fill="#6a040f"/><rect x="3" y="4" width="1" height="1" fill="#22543d"/><rect x="4" y="4" width="1" height="1" fill="#22543d"/><rect x="5" y="4" width="1" height="1" fill="#38a169"/><rect x="6" y="4" width="1" height="1" fill="#ba181b"/><rect x="7" y="4" width="1" height="1" fill="#22543d"/><rect x="8" y="4" width="1" height="1" fill="#22543d"/><rect x="9" y="4" width="1" height="1" fill="#38a169"/><rect x="10" y="4" width="1" height="1" fill="#ba181b"/><rect x="11" y="4" width="1" height="1" fill="#22543d"/><rect x="12" y="4" width="1" height="1" fill="#22543d"/><rect x="13" y="4" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="1" y="5" width="1" height="1" fill="#6a040f"/><rect x="2" y="5" width="1" height="1" fill="#e5383b"/><rect x="3" y="5" width="1" height="1" fill="#ffb3c1"/><rect x="4" y="5" width="1" height="1" fill="#ffb3c1"/><rect x="5" y="5" width="1" height="1" fill="#ffffff"/><rect x="6" y="5" width="1" height="1" fill="#e5383b"/><rect x="7" y="5" width="1" height="1" fill="#e5383b"/><rect x="8" y="5" width="1" height="1" fill="#e5383b"/><rect x="9" y="5" width="1" height="1" fill="#e5383b"/><rect x="10" y="5" width="1" height="1" fill="#e5383b"/><rect x="11" y="5" width="1" height="1" fill="#ba181b"/><rect x="12" y="5" width="1" height="1" fill="#ba181b"/><rect x="13" y="5" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="1" y="6" width="1" height="1" fill="#6a040f"/><rect x="2" y="6" width="1" height="1" fill="#ffb3c1"/><rect x="3" y="6" width="1" height="1" fill="#ffffff"/><rect x="4" y="6" width="1" height="1" fill="#ffffff"/><rect x="5" y="6" width="1" height="1" fill="#f75c74"/><rect x="6" y="6" width="1" height="1" fill="#e5383b"/><rect x="7" y="6" width="1" height="1" fill="#e5383b"/><rect x="8" y="6" width="1" height="1" fill="#ffd166"/><rect x="9" y="6" width="1" height="1" fill="#e5383b"/><rect x="10" y="6" width="1" height="1" fill="#e5383b"/><rect x="11" y="6" width="1" height="1" fill="#ba181b"/><rect x="12" y="6" width="1" height="1" fill="#ba181b"/><rect x="13" y="6" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="1" y="7" width="1" height="1" fill="#6a040f"/><rect x="2" y="7" width="1" height="1" fill="#e5383b"/><rect x="3" y="7" width="1" height="1" fill="#ffb3c1"/><rect x="4" y="7" width="1" height="1" fill="#ffb3c1"/><rect x="5" y="7" width="1" height="1" fill="#f75c74"/><rect x="6" y="7" width="1" height="1" fill="#e5383b"/><rect x="7" y="7" width="1" height="1" fill="#e5383b"/><rect x="8" y="7" width="1" height="1" fill="#e5383b"/><rect x="9" y="7" width="1" height="1" fill="#e5383b"/><rect x="10" y="7" width="1" height="1" fill="#e5383b"/><rect x="11" y="7" width="1" height="1" fill="#e5383b"/><rect x="12" y="7" width="1" height="1" fill="#ba181b"/><rect x="13" y="7" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="1" y="8" width="1" height="1" fill="#6a040f"/><rect x="2" y="8" width="1" height="1" fill="#e5383b"/><rect x="3" y="8" width="1" height="1" fill="#e5383b"/><rect x="4" y="8" width="1" height="1" fill="#e5383b"/><rect x="5" y="8" width="1" height="1" fill="#e5383b"/><rect x="6" y="8" width="1" height="1" fill="#e5383b"/><rect x="7" y="8" width="1" height="1" fill="#e5383b"/><rect x="8" y="8" width="1" height="1" fill="#e5383b"/><rect x="9" y="8" width="1" height="1" fill="#ffd166"/><rect x="10" y="8" width="1" height="1" fill="#e5383b"/><rect x="11" y="8" width="1" height="1" fill="#e5383b"/><rect x="12" y="8" width="1" height="1" fill="#ba181b"/><rect x="13" y="8" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="2" y="9" width="1" height="1" fill="#6a040f"/><rect x="3" y="9" width="1" height="1" fill="#e5383b"/><rect x="4" y="9" width="1" height="1" fill="#e5383b"/><rect x="5" y="9" width="1" height="1" fill="#ffd166"/><rect x="6" y="9" width="1" height="1" fill="#e5383b"/><rect x="7" y="9" width="1" height="1" fill="#e5383b"/><rect x="8" y="9" width="1" height="1" fill="#e5383b"/><rect x="9" y="9" width="1" height="1" fill="#e5383b"/><rect x="10" y="9" width="1" height="1" fill="#e5383b"/><rect x="11" y="9" width="1" height="1" fill="#ba181b"/><rect x="12" y="9" width="1" height="1" fill="#ba181b"/><rect x="13" y="9" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="2" y="10" width="1" height="1" fill="#6a040f"/><rect x="3" y="10" width="1" height="1" fill="#e5383b"/><rect x="4" y="10" width="1" height="1" fill="#e5383b"/><rect x="5" y="10" width="1" height="1" fill="#e5383b"/><rect x="6" y="10" width="1" height="1" fill="#e5383b"/><rect x="7" y="10" width="1" height="1" fill="#e5383b"/><rect x="8" y="10" width="1" height="1" fill="#e5383b"/><rect x="9" y="10" width="1" height="1" fill="#ffd166"/><rect x="10" y="10" width="1" height="1" fill="#e5383b"/><rect x="11" y="10" width="1" height="1" fill="#ba181b"/><rect x="12" y="10" width="1" height="1" fill="#ba181b"/><rect x="13" y="10" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="3" y="11" width="1" height="1" fill="#6a040f"/><rect x="4" y="11" width="1" height="1" fill="#e5383b"/><rect x="5" y="11" width="1" height="1" fill="#e5383b"/><rect x="6" y="11" width="1" height="1" fill="#e5383b"/><rect x="7" y="11" width="1" height="1" fill="#e5383b"/><rect x="8" y="11" width="1" height="1" fill="#ffd166"/><rect x="9" y="11" width="1" height="1" fill="#e5383b"/><rect x="10" y="11" width="1" height="1" fill="#e5383b"/><rect x="11" y="11" width="1" height="1" fill="#e5383b"/><rect x="12" y="11" width="1" height="1" fill="#ba181b"/><rect x="13" y="11" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="4" y="12" width="1" height="1" fill="#6a040f"/><rect x="5" y="12" width="1" height="1" fill="#e5383b"/><rect x="6" y="12" width="1" height="1" fill="#e5383b"/><rect x="7" y="12" width="1" height="1" fill="#e5383b"/><rect x="8" y="12" width="1" height="1" fill="#e5383b"/><rect x="9" y="12" width="1" height="1" fill="#e5383b"/><rect x="10" y="12" width="1" height="1" fill="#ba181b"/><rect x="11" y="12" width="1" height="1" fill="#ba181b"/><rect x="12" y="12" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="5" y="13" width="1" height="1" fill="#6a040f"/><rect x="6" y="13" width="1" height="1" fill="#e5383b"/><rect x="7" y="13" width="1" height="1" fill="#e5383b"/><rect x="8" y="13" width="1" height="1" fill="#ffd166"/><rect x="9" y="13" width="1" height="1" fill="#ba181b"/><rect x="10" y="13" width="1" height="1" fill="#ba181b"/><rect x="11" y="13" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="6" y="14" width="1" height="1" fill="#6a040f"/><rect x="7" y="14" width="1" height="1" fill="#e5383b"/><rect x="8" y="14" width="1" height="1" fill="#ba181b"/><rect x="9" y="14" width="1" height="1" fill="#ba181b"/><rect x="10" y="14" width="1" height="1" fill="#6a040f"/>` +
-  `<rect x="7" y="15" width="1" height="1" fill="#6a040f"/><rect x="8" y="15" width="1" height="1" fill="#ba181b"/><rect x="9" y="15" width="1" height="1" fill="#6a040f"/>` +
-`</svg>`;
-
-let fresitaClicks = 0;
-let timerResetFresita = null;
-
-function registrarClickFresita(origenEl) {
-  fresitaClicks++;
-
-  clearTimeout(timerResetFresita);
-  // Si pasan más de 6 segundos sin interacción se reinicia la cuenta
-  timerResetFresita = setTimeout(() => {
-    fresitaClicks = 0;
-  }, 6000);
-
-  // Microanimación en la fresita
-  const btn = origenEl?.closest?.('.fresita-pixel-btn') || origenEl;
-  if (btn) {
-    btn.classList.remove('is-clicked');
-    void btn.offsetWidth;
-    btn.classList.add('is-clicked');
-    crearMiniChispita(btn, fresitaClicks);
-  }
-
-  // Al 4to clic se desbloquea la frase solecito
-  if (fresitaClicks >= 4) {
-    fresitaClicks = 0;
-    clearTimeout(timerResetFresita);
-    mostrarMensajeSolecito();
-  }
-}
-
-function crearMiniChispita(btn, contador) {
-  try {
-    const rect = btn.getBoundingClientRect();
-    const chispa = document.createElement('span');
-    chispa.className = 'chispita-flotante';
-    const simbolos = ['✨', '⭐', '🌟', '☀️'];
-    chispa.textContent = simbolos[(contador - 1) % simbolos.length];
-    chispa.style.left = `${rect.left + rect.width / 2}px`;
-    chispa.style.top = `${rect.top}px`;
-    document.body.appendChild(chispa);
-    setTimeout(() => chispa.remove(), 700);
-  } catch (_) {}
-}
-
-function mostrarMensajeSolecito() {
-  let modal = document.getElementById('solecito-modal');
-  if (!modal) {
-    modal = document.createElement('div');
-    modal.className = 'solecito-modal-backdrop';
-    modal.id = 'solecito-modal';
-    modal.innerHTML = `
-      <div class="solecito-tarjeta" role="dialog" aria-modal="true" aria-labelledby="solecito-titulo">
-        <button type="button" class="solecito-cerrar-x" id="solecito-cerrar-x" aria-label="Cerrar mensaje">✕</button>
-        <div class="solecito-rayos-fondo" aria-hidden="true"></div>
-        
-        <div class="solecito-header">
-          <div class="solecito-emblema" aria-hidden="true">☀️</div>
-        </div>
-
-        <div class="solecito-subtitulo">
-          <span>EASTER EGG</span>
-        </div>
-
-        <h3 class="solecito-frase" id="solecito-titulo">
-          “¡Qué lindo solecito!”
-        </h3>
-        <p class="solecito-texto">
-        
-
-
-      </div>`;
-    document.body.appendChild(modal);
-
-    const cerrar = () => {
-      modal.classList.remove('is-visible');
-    };
-
-    modal.querySelector('#solecito-cerrar-btn')?.addEventListener('click', cerrar);
-    modal.querySelector('#solecito-cerrar-x')?.addEventListener('click', cerrar);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) cerrar();
-    });
-  }
-
-  lanzarDestellosSolecito();
-
-  requestAnimationFrame(() => {
-    modal.classList.add('is-visible');
-  });
-}
-
-function lanzarDestellosSolecito() {
-  const simbolos = ['☀️', '✨', '⭐', '🌟', '💛'];
-  for (let i = 0; i < 14; i++) {
-    const spark = document.createElement('span');
-    spark.className = 'destello-solecito-confeti';
-    spark.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
-    spark.style.left = `${48 + (Math.random() * 8 - 4)}vw`;
-    spark.style.top = `${45 + (Math.random() * 8 - 4)}vh`;
-    spark.style.setProperty('--dx', `${(Math.random() - 0.5) * 360}px`);
-    spark.style.setProperty('--dy', `${(Math.random() - 0.5) * 360}px`);
-    spark.style.setProperty('--rot', `${(Math.random() - 0.5) * 720}deg`);
-    document.body.appendChild(spark);
-    setTimeout(() => spark.remove(), 1100);
-  }
-}
-
 let hoverCodigoActual = null;
 
 const estado = {
@@ -459,7 +333,6 @@ Promise.all([cargarDatos('malla/componentes'), cargarDatos('malla/plan'), cargar
 function casillaAsignatura(codigo) {
   const a = estado.asignaturas.get(codigo);
   const wppIndicador = a.whatsapp ? `<span class="materia__wpp-punto" title="Grupo de WhatsApp disponible">💬</span>` : '';
-  const fresitaIndicador = (a.codigo === '1000034') ? FRESITA_PIXEL_SVG : '';
 
   let claseEstado = '';
   let estadoAria = '';
@@ -488,7 +361,7 @@ function casillaAsignatura(codigo) {
         <span class="materia__nombre">${esc(a.nombre)}</span>
         <span class="materia__cred">${a.creditos}</span>
         <span class="materia__codigo">
-          <span class="materia__codigo-num">${esc(a.codigo)}${wppIndicador}${fresitaIndicador}</span>
+          <span class="materia__codigo-num">${esc(a.codigo)}${wppIndicador}</span>
           ${badgeHtml}
         </span>
       </button>
@@ -657,7 +530,7 @@ function seleccionar(codigo, { desplazar = false } = {}) {
   pintarDetalle(`
     <div class="detalle__cabeza">
       <p class="detalle__codigo">Código ${esc(a.codigo)}</p>
-      <h3>${esc(a.nombre)}${a.codigo === '1000034' ? ` <span class="fresita-pixel-btn fresita-pixel-btn--detalle" role="button" tabindex="0" title="🍓 ¡Una linda fresita! Haz clic..." aria-label="Fresita en pixel art">${FRESITA_PIXEL_SVG}</span>` : ''}</h3>
+      <h3>${esc(a.nombre)}</h3>
       <ul class="etiquetas">
         <li class="etiqueta etiqueta--cred">${creditosTexto(a.creditos)} ${a.creditos === 1 ? 'crédito' : 'créditos'}</li>
         <li class="etiqueta etiqueta--comp">${esc(componente.nombre)}</li>
@@ -725,13 +598,6 @@ function seleccionarBolsa(boton) {
 }
 
 $('#detalle').addEventListener('click', (evento) => {
-  const fresitaBtn = evento.target.closest('.fresita-pixel-btn');
-  if (fresitaBtn) {
-    evento.stopPropagation();
-    evento.preventDefault();
-    registrarClickFresita(fresitaBtn);
-    return;
-  }
 
   if (evento.target.closest('.detalle__cerrar')) return cerrarDetalle();
 
@@ -750,22 +616,9 @@ $('#detalle').addEventListener('click', (evento) => {
   }
 });
 
-$('#detalle').addEventListener('keydown', (evento) => {
-  const fresitaBtn = evento.target.closest('.fresita-pixel-btn');
-  if (fresitaBtn && (evento.key === 'Enter' || evento.key === ' ')) {
-    evento.preventDefault();
-    evento.stopPropagation();
-    registrarClickFresita(fresitaBtn);
-  }
-});
 
 document.addEventListener('keydown', (evento) => {
   if (evento.key === 'Escape') {
-    const modalSolecito = document.getElementById('solecito-modal');
-    if (modalSolecito && modalSolecito.classList.contains('is-visible')) {
-      modalSolecito.classList.remove('is-visible');
-      return;
-    }
     if (!$('#detalle').hidden) cerrarDetalle();
   }
 });
