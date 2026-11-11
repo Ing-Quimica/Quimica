@@ -838,7 +838,6 @@ a { color: var(--naranja-quemado); text-decoration-thickness: 1.5px; }
 }
 .pie__tarjeta--desarrollo {
   border-top: 4px solid var(--verde);
-  justify-content: center;
 }
 
 .pie__tarjeta-sub {

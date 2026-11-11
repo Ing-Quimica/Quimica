@@ -38,6 +38,12 @@
     creadorInstagram: 'https://www.instagram.com/s_escobar__/',
     creadorInstagramUsuario: '@s_escobar__',
 
+    // Colaboradora del Portal Web
+    colaboradoraNombre: 'Angely Pérez Cardona',
+    colaboradoraRol: 'Colaboradora del Portal Web',
+    colaboradoraInstagram: 'https://www.instagram.com/_angely_perez/',
+    colaboradoraInstagramUsuario: '@_angely_perez',
+
     // Representación Estudiantil Oficial de Ingeniería Química
     reprePrincipalNombre: 'María José Collazos',
     reprePrincipalWhatsApp: 'https://wa.me/573024153321',

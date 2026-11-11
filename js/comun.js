@@ -349,14 +349,28 @@ function pintarPie() {
         <!-- TARJETA 2: CREACIÓN Y DESARROLLO WEB (MARCA DE AGUA) -->
         <div class="pie__tarjeta pie__tarjeta--desarrollo">
           <span class="pie__tarjeta-sub">CREACIÓN Y DESARROLLO WEB</span>
-          <p class="pie__tarjeta-nombre">Iniciativa y plataforma desarrollada por <strong>Santiago Escobar Arias</strong> · Representante de Sistemas</p>
-          <div class="pie__tarjeta-enlaces pie__tarjeta-enlaces--iconos">
-            <a class="pie__enlace-icono pie__enlace-icono--ig" href="https://www.instagram.com/s_escobar__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Santiago Escobar (@s_escobar__)" title="Instagram @s_escobar__">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a class="pie__enlace-icono pie__enlace-icono--correo" href="mailto:saescobara@unal.edu.co" aria-label="Correo institucional de Santiago Escobar (saescobara@unal.edu.co)" title="Correo saescobara@unal.edu.co">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </a>
+          
+          <div class="pie__repre-bloque">
+            <p class="pie__tarjeta-nombre">Iniciativa y plataforma desarrollada por <strong>Santiago Escobar Arias</strong> · Representante de Sistemas</p>
+            <div class="pie__tarjeta-enlaces pie__tarjeta-enlaces--iconos">
+              <a class="pie__enlace-icono pie__enlace-icono--ig" href="https://www.instagram.com/s_escobar__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Santiago Escobar (@s_escobar__)" title="Instagram @s_escobar__">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a class="pie__enlace-icono pie__enlace-icono--correo" href="mailto:saescobara@unal.edu.co" aria-label="Correo institucional de Santiago Escobar (saescobara@unal.edu.co)" title="Correo saescobara@unal.edu.co">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="pie__repre-divisor" aria-hidden="true"></div>
+
+          <div class="pie__repre-bloque">
+            <p class="pie__tarjeta-nombre"><strong>Angely Pérez Cardona</strong> · Colaboradora</p>
+            <div class="pie__tarjeta-enlaces pie__tarjeta-enlaces--iconos">
+              <a class="pie__enlace-icono pie__enlace-icono--ig" href="https://www.instagram.com/_angely_perez/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Angely Pérez (@_angely_perez)" title="Instagram @_angely_perez">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

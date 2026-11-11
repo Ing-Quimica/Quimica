@@ -36,7 +36,7 @@ data/
 
 - **Representante Estudiantil:** María José Collazos · Instagram [@majocollazoss](https://www.instagram.com/majocollazoss/) / [@repres_iq1](https://www.instagram.com/repres_iq1/)
 - **Capítulo Estudiantil:** AIChE UNAL Medellín · [@aiche.unmed](https://www.instagram.com/aiche.unmed/)
-- **Creación y Desarrollo Web:** Santiago Escobar Arias · Representante de Sistemas ([saescobara@unal.edu.co](mailto:saescobara@unal.edu.co))
+- **Creación y Desarrollo Web:** Santiago Escobar Arias · Representante de Sistemas ([saescobara@unal.edu.co](mailto:saescobara@unal.edu.co)) · **Colaboración:** Angely Pérez Cardona ([@_angely_perez](https://www.instagram.com/_angely_perez/))
 
 ## Ver el sitio en local
 
