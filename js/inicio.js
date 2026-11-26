@@ -210,6 +210,71 @@ function pintarGrupos(grupos) {
 }
 
 
+/* ---------- Simulador interactivo de reactor CSTR (Portada) ---------- */
+
+function iniciarSimuladorReactor() {
+  const card = $('#reactor-simulador');
+  const slider = $('#reactor-temp-slider');
+  const telTemp = $('#tel-temp');
+  const telPres = $('#tel-pres');
+  const telConv = $('#tel-conv');
+  const telRegimen = $('#tel-regimen');
+  const modos = $$('.reactor-modo', card || document);
+  if (!card || !slider || !telTemp || !telPres || !telConv || !telRegimen) return;
+
+  function actualizarReactor(tempK) {
+    const tK = Number(tempK);
+    const tC = Math.round(tK - 273.15);
+    // Presión aproximada por expansión de vapor en sistema cerrado (bar)
+    const presion = (1.15 + ((tK - 330) / 80) * 2.35).toFixed(2);
+    // Conversión cinética sigmoidal tipo Arrhenius en CSTR (%)
+    const kNorm = 1 / (1 + Math.exp(-(tK - 348) / 6.8));
+    const conv = Math.min(99.2, Math.max(42.0, 42 + kNorm * 57.2)).toFixed(1);
+
+    let regimen = 'Estacionario';
+    let colorEstado = '#6fe3a1';
+    if (tK < 352) {
+      regimen = 'Arranque';
+      colorEstado = '#F2A65A';
+    } else if (tK >= 388 && tK <= 402) {
+      regimen = 'Óptimo';
+      colorEstado = '#6fe3a1';
+    } else if (tK > 402) {
+      regimen = 'Alta Carga';
+      colorEstado = '#FF8A65';
+    }
+
+    telTemp.innerHTML = `${tK.toFixed(2)} K <small>(${tC} °C)</small>`;
+    telPres.textContent = `${presion} bar`;
+    telConv.textContent = `${conv}%`;
+    telRegimen.textContent = regimen;
+    telRegimen.style.color = colorEstado;
+
+    const factor = (tK - 330) / 80; // 0..1
+    const velocidad = (0.6 + factor * 1.15).toFixed(2);
+    card.style.setProperty('--reactor-speed', velocidad);
+    card.style.setProperty('--reactor-intensity', (0.45 + factor * 0.55).toFixed(2));
+
+    modos.forEach((btn) => {
+      const esExacto = Math.abs(Number(btn.dataset.temp) - tK) <= 4;
+      btn.classList.toggle('is-activo', esExacto);
+      btn.setAttribute('aria-pressed', String(esExacto));
+    });
+  }
+
+  slider.addEventListener('input', (e) => actualizarReactor(e.target.value));
+  modos.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      slider.value = btn.dataset.temp;
+      actualizarReactor(btn.dataset.temp);
+    });
+  });
+
+  actualizarReactor(slider.value);
+}
+
+iniciarSimuladorReactor();
+
 /* ---------- Carga bajo demanda ---------- */
 
 cargarDatos('programa')

@@ -58,36 +58,42 @@ const PAGINAS = [
   {
     id: 'inicio',
     texto: 'Inicio',
+    corto: 'Inicio',
     url: 'index.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="7" y1="16" x2="17" y2="16"/></svg>`
   },
   {
     id: 'avance',
     texto: 'Mi avance',
+    corto: 'Avance',
     url: 'avance.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
   },
   {
     id: 'malla',
     texto: 'Malla curricular',
+    corto: 'Malla',
     url: 'malla.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></svg>`
   },
   {
     id: 'intercampus',
     texto: 'Rutas Intercampus',
+    corto: 'Rutas',
     url: 'intercampus.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/></svg>`
   },
   {
     id: 'convenios',
     texto: 'Convenios',
+    corto: 'Convenios',
     url: 'convenios.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l6.6-6.6a2 2 0 0 0 0-2.8l-3.2-3.2a2 2 0 0 0-2.8 0L13 8.4"/><path d="m8 14-2-2a2 2 0 0 1 0-2.8l3.2-3.2a2 2 0 0 1 2.8 0l2 2"/></svg>`
   },
   {
     id: 'info',
     texto: 'Información general',
+    corto: 'Info',
     url: 'info.html',
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav__icono"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`
   },
@@ -110,19 +116,10 @@ function pintarBarra() {
             <div class="barra__subfila">
               <span class="barra__facultad">Facultad de Minas</span>
               <span class="barra__separador" aria-hidden="true">·</span>
-              <span class="barra__sede">Sede Medellín</span>
+              <span class="barra__sede">UNAL Medellín</span>
             </div>
           </div>
         </a>
-
-        <button class="barra__boton-menu" id="btn-menu" type="button" aria-expanded="false" aria-controls="menu-navegacion" aria-label="Abrir menú de navegación">
-          <span class="barra__icono-menu" aria-hidden="true">
-            <span class="barra__linea barra__linea--1"></span>
-            <span class="barra__linea barra__linea--2"></span>
-            <span class="barra__linea barra__linea--3"></span>
-          </span>
-          <span class="barra__boton-texto">Menú</span>
-        </button>
 
         <nav class="nav" id="menu-navegacion" aria-label="Módulos del portal">
           <div class="nav__glider" id="nav-glider" aria-hidden="true"></div>
@@ -138,10 +135,20 @@ function pintarBarra() {
           }).join('')}
         </nav>
       </div>
-    </header>`;
+    </header>
+    <nav class="nav-movil" id="nav-movil" aria-label="Navegación principal móvil">
+      ${PAGINAS.map((p) => {
+        const esActivo = p.id === actual;
+        return `
+          <a href="${p.url}" class="nav-movil__item ${esActivo ? 'nav-movil__item--activo' : ''}" ${esActivo ? 'aria-current="page"' : ''} data-pagina-id="${p.id}">
+            <span class="nav-movil__icono" aria-hidden="true">${p.icono}</span>
+            <span class="nav-movil__etiqueta">${p.corto}</span>
+          </a>
+        `;
+      }).join('')}
+    </nav>`;
 
   configurarNavegacionInteractiva();
-  configurarMenuMovil();
 }
 
 function configurarNavegacionInteractiva() {
@@ -155,7 +162,7 @@ function configurarNavegacionInteractiva() {
   const itemActivo = items.find((a) => a.getAttribute('aria-current') === 'page') || null;
 
   function reposicionarGlider(el, suave = true) {
-    if (!el || window.innerWidth <= 980) {
+    if (!el || window.innerWidth <= 900) {
       glider.style.opacity = '0';
       return;
     }
@@ -244,6 +251,17 @@ function configurarNavegacionInteractiva() {
       reposicionarGlider(itemActivo, false);
     }, 100);
   });
+
+  // Respaldo JS para la barra de progreso de lectura cuando no existe animation-timeline: scroll()
+  if (barraProgreso && (!window.CSS || !CSS.supports('animation-timeline', 'scroll()'))) {
+    const actualizarProgreso = () => {
+      const desplazable = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = desplazable > 0 ? Math.min(1, Math.max(0, window.scrollY / desplazable)) : 0;
+      barraProgreso.style.transform = `scaleX(${pct})`;
+    };
+    window.addEventListener('scroll', actualizarProgreso, { passive: true });
+    actualizarProgreso();
+  }
 }
 
 function configurarMenuMovil() {
@@ -387,6 +405,8 @@ function pintarPie() {
 
 function mostrarMensajeAutor() {
   if (sessionStorage.getItem('mensaje_autor_cerrado') === '1') return;
+  // Evitar cubrir la pantalla en móviles pequeños en páginas secundarias
+  if (window.innerWidth <= 640 && document.body.dataset.pagina !== 'inicio') return;
 
   const toast = document.createElement('aside');
   toast.className = 'toast-autor';

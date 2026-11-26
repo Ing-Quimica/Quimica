@@ -1435,7 +1435,7 @@
 .info-tabla-wrap { border: 0; border-radius: 18px; box-shadow: 0 0 0 1px var(--linea), 0 14px 26px -24px rgba(10, 44, 82, .6); }
 .info-tabla thead th { background: var(--acento-suave); color: var(--acento-osc); }
 .info-tabla tbody tr:nth-child(even) { background: #f9fbfd; }
-.info-consejo { border: 0; border-left: 6px solid #f7b61a; border-radius: 16px; background: #fff8e1; }
+.info-consejo { border: 1px solid rgba(232, 116, 59, 0.35); border-radius: 16px; background: #fff8e1; }
 .info-guia-footer { border-top: 0; margin-top: 22px; }
 .info-enlace-oficial { border-radius: 14px; background: var(--acento-suave); border: 0; color: var(--acento-osc); }
 

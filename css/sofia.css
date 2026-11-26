@@ -42,6 +42,13 @@
   pointer-events: none;
 }
 
+@media (max-width: 900px) {
+  .sofia-flotante-wrap {
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    right: 14px;
+  }
+}
+
 .sofia-flotante-wrap > * {
   pointer-events: auto;
 }
@@ -654,23 +661,23 @@
 
 @media (max-width: 640px) {
   .sofia-flotante-wrap {
-    bottom: 16px;
-    right: 16px;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    right: 14px;
   }
 
   .sofia-boton {
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
   }
 
   .sofia-ventana {
-    bottom: 82px;
+    bottom: calc(142px + env(safe-area-inset-bottom));
     right: 12px;
     left: 12px;
     width: auto;
     max-width: none;
-    height: min(580px, calc(100dvh - 96px), calc(100vh - 96px));
-    max-height: calc(100dvh - 96px);
+    height: min(520px, calc(100dvh - 156px), calc(100vh - 156px));
+    max-height: calc(100dvh - 156px);
     border-radius: 18px;
   }
 
@@ -678,9 +685,9 @@
     width: auto;
     left: 12px;
     right: 12px;
-    bottom: 82px;
-    height: min(600px, calc(100dvh - 96px), calc(100vh - 96px));
-    max-height: calc(100dvh - 96px);
+    bottom: calc(142px + env(safe-area-inset-bottom));
+    height: min(540px, calc(100dvh - 156px), calc(100vh - 156px));
+    max-height: calc(100dvh - 156px);
   }
 
   .sofia-cabecera {

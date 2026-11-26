@@ -13,7 +13,7 @@
   <meta name="apple-mobile-web-app-title" content="Química UNAL">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/inicio.css">
   <link rel="stylesheet" href="css/sofia.css">
@@ -42,25 +42,35 @@
           Transformamos la materia y la energía a escala molecular e industrial. Líderes en balances de materia, termodinámica, diseño de reactores y operaciones unitarias para una industria más limpia y sostenible.
         </p>
 
+        <div class="portada__acciones">
+          <a class="portada__boton" href="malla.html">
+            <span>Explorar Malla 3525</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="portada__boton portada__boton--secundario" href="avance.html">
+            <span>Simular Mi Avance</span>
+          </a>
+        </div>
+
         <ul class="portada__cifras" id="portada-cifras" aria-label="Datos clave del programa"></ul>
       </div>
 
-      <!-- Columna Derecha: Cuadro de Proceso / Reactor Químico -->
-      <div class="portada__visual-iq" aria-hidden="true">
-        <div class="reactor-hero-card">
-          <div class="reactor-hero-card__glow"></div>
+      <!-- Columna Derecha: Cuadro de Proceso / Reactor Químico Interactivo -->
+      <div class="portada__visual-iq">
+        <div class="reactor-hero-card" id="reactor-simulador" style="--reactor-speed: 1; --reactor-intensity: 0.72;">
+          <div class="reactor-hero-card__glow" aria-hidden="true"></div>
           
           <div class="reactor-hero-card__header">
-            <span class="reactor-hero-card__tag">UNIDAD DE PROCESO · REACCIÓN & CONTROL</span>
+            <span class="reactor-hero-card__tag">REACTOR CSTR · SIMULADOR</span>
             <span class="reactor-hero-card__sede">FACULTAD DE MINAS</span>
           </div>
 
           <!-- Cámara de Reacción Química / Unidad de Proceso -->
-          <div class="reactor-hero-card__nucleo">
+          <div class="reactor-hero-card__nucleo" aria-hidden="true">
             <div class="reactor-hero-card__anillo-giro"></div>
             <div class="reactor-hero-card__camara" title="Simulación de proceso continuo: reacción endotérmica, mezcla y condensación">
               <!-- Reacción Química Animada (SVG + CSS) -->
-              <svg class="reaccion-quimica-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Reacción química en reactor continuo">
+              <svg class="reaccion-quimica-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <!-- Gradiente del fluido en reacción: conversión de reactivos (naranja) a productos (verde bosque) -->
                   <linearGradient id="gradFluido" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -150,23 +160,36 @@
           </div>
 
           <!-- Telemetría de proceso industrial en tiempo real -->
-          <div class="reactor-hero-card__telemetria">
+          <div class="reactor-hero-card__telemetria" aria-live="polite">
             <div class="telemetria-item">
               <span class="telemetria-item__etiqueta">TEMPERATURA (T)</span>
-              <strong class="telemetria-item__valor">368.15 K <small>(95 °C)</small></strong>
+              <strong class="telemetria-item__valor" id="tel-temp">368.15 K <small>(95 °C)</small></strong>
             </div>
             <div class="telemetria-item">
               <span class="telemetria-item__etiqueta">PRESIÓN (P)</span>
-              <strong class="telemetria-item__valor">2.40 bar</strong>
+              <strong class="telemetria-item__valor" id="tel-pres">2.40 bar</strong>
             </div>
             <div class="telemetria-item">
               <span class="telemetria-item__etiqueta">CONVERSIÓN (X)</span>
-              <strong class="telemetria-item__valor" style="color: var(--ambar);">98.6%</strong>
+              <strong class="telemetria-item__valor telemetria-item__valor--ambar" id="tel-conv">96.4%</strong>
             </div>
             <div class="telemetria-item">
               <span class="telemetria-item__etiqueta">RÉGIMEN</span>
-              <strong class="telemetria-item__valor" style="color: #6fe3a1;">Estacionario</strong>
+              <strong class="telemetria-item__valor telemetria-item__valor--estado" id="tel-regimen">Estacionario</strong>
             </div>
+          </div>
+
+          <!-- Control interactivo de operación -->
+          <div class="reactor-control">
+            <div class="reactor-control__cabecera">
+              <label class="reactor-control__etiqueta" for="reactor-temp-slider">Control térmico</label>
+              <div class="reactor-control__modos" role="group" aria-label="Modos de operación">
+                <button type="button" class="reactor-modo" data-temp="340">Arranque</button>
+                <button type="button" class="reactor-modo is-activo" data-temp="368">Estacionario</button>
+                <button type="button" class="reactor-modo" data-temp="395">Óptimo</button>
+              </div>
+            </div>
+            <input type="range" id="reactor-temp-slider" class="reactor-control__slider" min="330" max="410" step="1" value="368" aria-label="Ajustar temperatura del reactor en Kelvin">
           </div>
         </div>
       </div>

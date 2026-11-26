@@ -14,12 +14,17 @@
 
 .portada__landing {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.12fr 0.88fr;
   align-items: center;
-  gap: 48px;
-  padding: 64px 0 76px;
+  gap: 44px;
+  padding: 52px 0 68px;
   position: relative;
   z-index: 2;
+}
+
+@keyframes entradaHero {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .portada__info {
@@ -27,20 +32,21 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  animation: entradaHero 420ms var(--ease-out) both;
 }
 
 .portada__badge-iq {
   display: inline-flex;
   align-items: center;
-  padding: 6px 18px;
+  padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(74, 20, 40, 0.85);
-  border: 1.5px solid var(--ambar);
-  color: var(--crema);
-  font-family: var(--letra-universidad);
-  font-size: 12px;
+  background: rgba(24, 8, 15, 0.85);
+  border: 1px solid rgba(242, 166, 90, 0.5);
+  color: var(--ambar);
+  font-family: var(--letra-mono);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   margin-bottom: 18px;
   backdrop-filter: blur(8px);
@@ -83,18 +89,19 @@
   position: relative;
   width: 100%;
   max-width: 420px;
-  background: rgba(74, 20, 40, 0.84);
-  border: 2px solid rgba(242, 166, 90, 0.45);
-  border-radius: 28px;
-  padding: 26px 24px 22px;
+  background: rgba(58, 15, 31, 0.9);
+  border: 1.5px solid rgba(242, 166, 90, 0.42);
+  border-radius: 24px;
+  padding: 22px 22px 20px;
   backdrop-filter: blur(14px);
-  box-shadow: 0 20px 48px -12px rgba(42, 26, 31, 0.8), 0 0 28px rgba(232, 116, 59, 0.22);
+  box-shadow: 0 22px 46px -14px rgba(24, 7, 15, 0.78);
   overflow: hidden;
-  transition: transform .3s ease, border-color .3s ease;
+  animation: entradaHero 480ms 80ms var(--ease-out) both;
+  transition: transform 220ms var(--ease-out), border-color 220ms var(--ease-out);
 }
 
 .reactor-hero-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--ambar);
 }
 
@@ -102,10 +109,11 @@
   position: absolute;
   top: -60px;
   right: -60px;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(232, 116, 59, 0.4) 0%, transparent 70%);
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(232, 116, 59, var(--reactor-intensity, 0.45)) 0%, transparent 70%);
   pointer-events: none;
+  transition: opacity 200ms var(--ease-out);
 }
 
 .reactor-hero-card__header {
@@ -190,7 +198,7 @@
 
 /* Llama térmica inferior */
 .reaccion__llama {
-  animation: llamaFlicker 1.8s ease-in-out infinite;
+  animation: llamaFlicker calc(1.8s / var(--reactor-speed, 1)) ease-in-out infinite;
   transform-origin: 80px 158px;
 }
 @keyframes llamaFlicker {
@@ -200,7 +208,7 @@
 
 /* Ola del fluido reactivo */
 .reaccion__ola {
-  animation: olaFluido 3.2s ease-in-out infinite alternate;
+  animation: olaFluido calc(3.2s / var(--reactor-speed, 1)) ease-in-out infinite alternate;
   transform-origin: center;
 }
 @keyframes olaFluido {
@@ -212,7 +220,7 @@
 /* Agitador mecánico continuo (CSTR) */
 .reaccion__aspas {
   transform-origin: 80px 128px;
-  animation: agitarAspas 2.2s linear infinite;
+  animation: agitarAspas calc(2.2s / var(--reactor-speed, 1)) linear infinite;
 }
 @keyframes agitarAspas {
   0% { transform: scaleX(1); opacity: 0.95; }
@@ -222,7 +230,7 @@
 
 /* Molécula reactiva flotante */
 .reaccion__molecula {
-  animation: rotarMolecula 9s linear infinite;
+  animation: rotarMolecula calc(9s / var(--reactor-speed, 1)) linear infinite;
   transform-origin: 86px 103px;
 }
 @keyframes rotarMolecula {
@@ -233,13 +241,13 @@
 
 /* Burbujas cinéticas ascendiendo */
 .reaccion__burbuja {
-  animation: ascenderBurbuja 3s infinite ease-in;
+  animation: ascenderBurbuja calc(3s / var(--reactor-speed, 1)) infinite ease-in;
 }
-.rb-1 { animation-duration: 2.6s; animation-delay: 0.1s; }
-.rb-2 { animation-duration: 3.4s; animation-delay: 0.9s; }
-.rb-3 { animation-duration: 2.2s; animation-delay: 1.5s; }
-.rb-4 { animation-duration: 2.9s; animation-delay: 0.5s; }
-.rb-5 { animation-duration: 2.4s; animation-delay: 1.8s; }
+.rb-1 { animation-duration: calc(2.6s / var(--reactor-speed, 1)); animation-delay: 0.1s; }
+.rb-2 { animation-duration: calc(3.4s / var(--reactor-speed, 1)); animation-delay: 0.9s; }
+.rb-3 { animation-duration: calc(2.2s / var(--reactor-speed, 1)); animation-delay: 1.5s; }
+.rb-4 { animation-duration: calc(2.9s / var(--reactor-speed, 1)); animation-delay: 0.5s; }
+.rb-5 { animation-duration: calc(2.4s / var(--reactor-speed, 1)); animation-delay: 1.8s; }
 
 @keyframes ascenderBurbuja {
   0% { transform: translateY(0) scale(0.6); opacity: 0; }
@@ -275,10 +283,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  background: rgba(42, 26, 31, 0.65);
+  background: rgba(24, 7, 15, 0.55);
   padding: 12px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .telemetria-item {
@@ -297,15 +305,118 @@
 
 .telemetria-item__valor {
   font-family: var(--letra-titulo);
-  font-size: 15px;
+  font-size: 14.5px;
   color: #ffffff;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
+.telemetria-item__valor--ambar { color: var(--ambar); }
+.telemetria-item__valor--estado { color: #6fe3a1; }
+
 .telemetria-item__valor small {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 500;
   color: var(--ambar);
+}
+
+/* Control interactivo del simulador */
+.reactor-control {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reactor-control__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.reactor-control__etiqueta {
+  font-family: var(--letra-universidad);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.reactor-control__modos {
+  display: inline-flex;
+  gap: 4px;
+  background: rgba(24, 7, 15, 0.55);
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.reactor-modo {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--letra-universidad);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  transition: background 150ms var(--ease-out), color 150ms var(--ease-out), transform 120ms var(--ease-out);
+}
+
+.reactor-modo:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.reactor-modo:active {
+  transform: scale(0.96);
+}
+
+.reactor-modo.is-activo {
+  background: var(--naranja);
+  color: var(--texto);
+}
+
+.reactor-control__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--verde) 0%, var(--ambar) 55%, var(--naranja) 100%);
+  outline: none;
+  cursor: pointer;
+}
+
+.reactor-control__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--vino-profundo);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  transition: transform 140ms var(--ease-out);
+}
+
+.reactor-control__slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+.reactor-control__slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--vino-profundo);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 
@@ -427,26 +538,28 @@
 .iq-evento-mini-card {
   display: flex;
   flex-direction: column;
-  padding: 12px 18px;
+  padding: 13px 18px;
   border-radius: 14px;
   background: #ffffff;
   color: var(--texto);
+  border: 1px solid rgba(242, 166, 90, 0.35);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform .2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transition: transform 180ms var(--ease-out), border-color 180ms var(--ease-out);
 }
 
 .iq-evento-mini-card:hover {
-  transform: translateX(4px);
+  transform: translateY(-2px);
+  border-color: var(--ambar);
 }
 
 .iq-evento-mini-card__linea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 5px;
+  display: inline-block;
+  width: 24px;
+  height: 3.5px;
+  border-radius: 999px;
+  margin-bottom: 6px;
 }
 
 .iq-evento-mini-card strong {
@@ -561,36 +674,26 @@
 
 .rutas__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 265px), 1fr));
+  gap: 20px;
 }
 
 .ruta-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 26px 24px 22px;
+  padding: 24px 22px 20px;
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: var(--radio-tarjeta);
   border: 1px solid var(--linea);
-  box-shadow: 0 8px 24px -10px rgba(42, 26, 31, 0.08);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 8px 22px -12px rgba(42, 26, 31, 0.08);
+  transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out), border-color 180ms var(--ease-out);
   overflow: hidden;
 }
 
-.ruta-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4.5px;
-  background: var(--color-ruta, var(--vino));
-}
-
 .ruta-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px -12px rgba(42, 26, 31, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -12px rgba(42, 26, 31, 0.16);
   border-color: var(--color-ruta, var(--naranja));
 }
 
@@ -665,14 +768,15 @@
   transform: translateX(3px);
 }
 
-/* Acreditación */
+/* Acreditación: Banda de contraste Bosque Profundo */
 .acreditacion {
   margin-top: 56px;
-  padding: 34px 36px;
-  border-radius: 24px;
-  background: #ffffff;
-  border: 1px solid var(--linea);
-  box-shadow: 0 12px 32px -12px rgba(42, 26, 31, 0.1);
+  padding: 36px 36px 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #132E21 0%, #1C4431 100%);
+  border: 1px solid rgba(220, 235, 223, 0.22);
+  box-shadow: 0 20px 44px -16px rgba(19, 46, 33, 0.45);
+  color: #ffffff;
 }
 
 .acreditacion__cabecera {
@@ -685,9 +789,10 @@
 .acreditacion__sello-icono {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
-  background: var(--rosa-vino);
-  color: var(--vino);
+  border-radius: 14px;
+  background: rgba(242, 166, 90, 0.16);
+  border: 1px solid rgba(242, 166, 90, 0.4);
+  color: var(--ambar);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -696,37 +801,38 @@
 .acreditacion__sello-icono svg { width: 28px; height: 28px; }
 
 .acreditacion__antetitulo {
-  font-family: var(--letra-universidad);
+  font-family: var(--letra-mono);
   font-size: 11px;
-  letter-spacing: .14em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--naranja-quemado);
+  color: var(--ambar);
   font-weight: 700;
 }
 
 .acreditacion__estado {
   font-family: var(--letra-titulo);
   font-size: clamp(20px, 2.5vw, 25px);
-  color: var(--vino);
+  color: #ffffff;
   font-weight: 700;
   margin-top: 2px;
 }
 
 .acreditacion__rejilla {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
   margin-bottom: 20px;
 }
 
 .acreditacion__tarjeta {
-  background: var(--crema);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: var(--radio-tarjeta);
   padding: 18px 20px;
-  border-left: 4px solid var(--verde);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 .acreditacion__tarjeta--renovacion {
-  border-left-color: var(--naranja);
+  background: rgba(232, 116, 59, 0.14);
+  border-color: rgba(242, 166, 90, 0.35);
 }
 
 .acreditacion__tarjeta-encabezado {
@@ -737,10 +843,10 @@
 }
 
 .acreditacion__anio-badge {
-  font-family: var(--letra-titulo);
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--vino);
+  font-family: var(--letra-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ambar);
 }
 
 .acreditacion__hito-tipo {
@@ -748,13 +854,13 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .08em;
-  color: var(--texto-suave);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .acreditacion__texto {
   font-size: 13.5px;
   line-height: 1.5;
-  color: var(--texto);
+  color: #EDF4EF;
 }
 
 .acreditacion__pie {
@@ -762,20 +868,20 @@
   align-items: flex-start;
   gap: 10px;
   padding-top: 14px;
-  border-top: 1px solid var(--linea);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .acreditacion__info-icono {
   width: 18px;
   height: 18px;
-  color: var(--naranja-quemado);
+  color: var(--ambar);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .acreditacion__nota {
   font-size: 13px;
-  color: var(--texto-suave);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.45;
 }
 
@@ -795,30 +901,30 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 20px;
 }
 
 .rasgo {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 28px 24px 24px;
+  border-radius: var(--radio-tarjeta);
+  padding: 24px 22px 22px;
   border: 1px solid var(--linea);
-  border-top: 5px solid var(--vino);
-  box-shadow: 0 8px 24px -10px rgba(42, 26, 31, 0.08);
+  box-shadow: 0 8px 22px -12px rgba(42, 26, 31, 0.08);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out), border-color 180ms var(--ease-out);
 }
 
-.rasgo:nth-child(2) { border-top-color: var(--verde); }
-.rasgo:nth-child(3) { border-top-color: var(--naranja); }
-.rasgo:nth-child(4) { border-top-color: var(--vino-profundo); }
+.rasgo:nth-child(2) .rasgo__icono { background: var(--verde-salvia); color: var(--verde-profundo); }
+.rasgo:nth-child(3) .rasgo__icono { background: #FCEADE; color: var(--naranja-quemado); }
+.rasgo:nth-child(4) .rasgo__icono { background: var(--rosa-vino); color: var(--vino-profundo); }
 
 .rasgo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px -12px rgba(42, 26, 31, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -12px rgba(42, 26, 31, 0.14);
+  border-color: rgba(107, 31, 58, 0.35);
 }
 
 .rasgo__icono {
@@ -1044,10 +1150,35 @@
 }
 
 @media (max-width: 600px) {
+  .portada__landing {
+    padding: 36px 0 48px;
+    gap: 28px;
+  }
+  .portada__acciones {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .portada__acciones .portada__boton {
+    width: 100%;
+  }
   .reactor-hero-card {
-    padding: 20px 16px;
+    padding: 18px 16px;
+    border-radius: 20px;
   }
   .reactor-hero-card__telemetria {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .iq-evento-banner {
+    padding: 22px 18px;
+    gap: 22px;
+  }
+  .acreditacion {
+    padding: 24px 18px;
+  }
+  .programa__texto {
+    padding: 22px 18px;
   }
 }
